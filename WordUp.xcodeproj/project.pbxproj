@@ -11,6 +11,9 @@
 		FAEDE20F2AE9D24700A51519 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE20E2AE9D24700A51519 /* ContentView.swift */; };
 		FAEDE2112AE9D24900A51519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEDE2102AE9D24900A51519 /* Assets.xcassets */; };
 		FAEDE2142AE9D24900A51519 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEDE2132AE9D24900A51519 /* Preview Assets.xcassets */; };
+		FAEDE21B2AE9D28E00A51519 /* Bundle-decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE21A2AE9D28E00A51519 /* Bundle-decodable.swift */; };
+		FAEDE21D2AE9D2FA00A51519 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE21C2AE9D2FA00A51519 /* Word.swift */; };
+		FAEDE21F2AE9D4FC00A51519 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = FAEDE21E2AE9D4FC00A51519 /* words.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		FAEDE20E2AE9D24700A51519 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAEDE2102AE9D24900A51519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEDE2132AE9D24900A51519 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAEDE21A2AE9D28E00A51519 /* Bundle-decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-decodable.swift"; sourceTree = "<group>"; };
+		FAEDE21C2AE9D2FA00A51519 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		FAEDE21E2AE9D4FC00A51519 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */,
 				FAEDE20E2AE9D24700A51519 /* ContentView.swift */,
+				FAEDE21C2AE9D2FA00A51519 /* Word.swift */,
+				FAEDE21E2AE9D4FC00A51519 /* words.json */,
+				FAEDE21A2AE9D28E00A51519 /* Bundle-decodable.swift */,
 				FAEDE2102AE9D24900A51519 /* Assets.xcassets */,
 				FAEDE2122AE9D24900A51519 /* Preview Content */,
 			);
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEDE21F2AE9D4FC00A51519 /* words.json in Resources */,
 				FAEDE2142AE9D24900A51519 /* Preview Assets.xcassets in Resources */,
 				FAEDE2112AE9D24900A51519 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEDE20F2AE9D24700A51519 /* ContentView.swift in Sources */,
+				FAEDE21D2AE9D2FA00A51519 /* Word.swift in Sources */,
 				FAEDE20D2AE9D24700A51519 /* WordUpApp.swift in Sources */,
+				FAEDE21B2AE9D28E00A51519 /* Bundle-decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

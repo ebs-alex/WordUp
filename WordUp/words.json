@@ -1,0 +1,18 @@
+[
+{
+    "id":"hello",
+    "name":"hello",
+    "definition":"a greeting",
+},
+{
+    "id":"world",
+    "name":"world",
+    "definition":"our world",
+},
+{
+    "id":"third",
+    "name":"third",
+    "definition":"a comes after second",
+},
+
+]

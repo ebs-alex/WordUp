@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    let words: [Word] = Bundle.main.decode("words.json")
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                List(words) { word in
+                    NavigationLink {
+                        Text(word.name)
+                            .navigationTitle(word.name)
+                    } label: {
+                        Text(word.name)
+                    }
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
