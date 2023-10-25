@@ -8,21 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
     let words: [Word] = Bundle.main.decode("words.json")
+    @State var randomWord = 0
     
     var body: some View {
         NavigationStack {
             VStack {
-                List(words) { word in
-                    NavigationLink {
-                        Text(word.name)
-                            .navigationTitle(word.name)
-                    } label: {
-                        Text(word.name)
-                    }
+                NavigationLink {
+                    Text(words[randomWord].name)
+                } label: {
+                    Text("Give me random word")
+                }
+                
+//                Button("Random Word") {
+//                    
+//                }
+                
+                NavigationLink {
+                    DictionaryView()
+                } label: {
+                    Text("Open Dictionary")
                 }
             }
             .padding()
+            .onAppear {
+                randomWord = Int.random(in: 0...words.count-1)
+            }
         }
     }
 }
