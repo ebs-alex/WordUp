@@ -17,6 +17,7 @@
 		FAEDE2212AE9DA8700A51519 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE2202AE9DA8700A51519 /* DictionaryView.swift */; };
 		FAEDE2232AE9DC8800A51519 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE2222AE9DC8800A51519 /* ViewModel.swift */; };
 		FAEDE2252AE9DE2400A51519 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE2242AE9DE2400A51519 /* WordView.swift */; };
+		FAEDE2272AE9FBFA00A51519 /* RandomWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE2262AE9FBFA00A51519 /* RandomWordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FAEDE2202AE9DA8700A51519 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		FAEDE2222AE9DC8800A51519 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FAEDE2242AE9DE2400A51519 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		FAEDE2262AE9FBFA00A51519 /* RandomWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */,
 				FAEDE20E2AE9D24700A51519 /* ContentView.swift */,
 				FAEDE2242AE9DE2400A51519 /* WordView.swift */,
+				FAEDE2262AE9FBFA00A51519 /* RandomWordView.swift */,
 				FAEDE2202AE9DA8700A51519 /* DictionaryView.swift */,
 				FAEDE21C2AE9D2FA00A51519 /* Word.swift */,
 				FAEDE21E2AE9D4FC00A51519 /* words.json */,
@@ -163,6 +166,7 @@
 				FAEDE20D2AE9D24700A51519 /* WordUpApp.swift in Sources */,
 				FAEDE2232AE9DC8800A51519 /* ViewModel.swift in Sources */,
 				FAEDE21B2AE9D28E00A51519 /* Bundle-decodable.swift in Sources */,
+				FAEDE2272AE9FBFA00A51519 /* RandomWordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

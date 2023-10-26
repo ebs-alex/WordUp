@@ -1,18 +1,33 @@
 [
 {
-    "id":"hello",
-    "name":"hello",
-    "definition":"a greeting",
+    "id":"Abate",
+    "name":"Abate",
+    "definition":"to become less active, less intense, or less in amount",
 },
 {
-    "id":"world",
-    "name":"world",
-    "definition":"our world",
+    "id":"Ambivalence",
+    "name":"Ambivalence",
+    "definition":" the state of being uncertain or stuck between two or more options",
 },
 {
-    "id":"third",
-    "name":"third",
-    "definition":"a comes after second",
+    "id":"Analogous",
+    "name":"Analogous",
+    "definition":"adj. similar but not identical",
+},
+{
+    "id":"Anomaly",
+    "name":"Anomaly",
+    "definition":"n. something different from the norm",
+},
+{
+    "id":"Antipathy",
+    "name":"Antipathy",
+    "definition":"n. a strong feeling of dislike",
+},
+{
+    "id":"Apex",
+    "name":"Apex",
+    "definition":"n. the highest point of something",
 },
 
 ]

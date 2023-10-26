@@ -15,13 +15,15 @@ struct DictionaryView: View {
             VStack {
                 List(words) { word in
                     NavigationLink {
-                        Text(word.name)
+                        WordView(word: word)
                             .navigationTitle(word.name)
                     } label: {
                         Text(word.name)
                     }
                 }
             }
+            .navigationTitle("Dictionary")
+            .navigationBarTitleDisplayMode(.inline)
             .padding()
         }
     }
