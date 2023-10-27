@@ -15,7 +15,7 @@ struct RandomWordView: View {
     var body: some View {
         VStack {
             Text(word.name)
-            Text(word.definition)
+            Text(word.fullDefinition)
                 .opacity(definitionOpacity)
             Button("Show Definition") {
 //                defintionPresented = true
@@ -24,7 +24,7 @@ struct RandomWordView: View {
         }
         .sheet(isPresented: $defintionPresented) {
             VStack {
-                Text(word.definition)
+                Text(word.fullDefinition)
             }
             .padding()
         }

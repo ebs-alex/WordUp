@@ -10,7 +10,13 @@ import Foundation
 struct Word: Codable, Identifiable, Comparable {
     let id: String
     let name: String
-    let definition: String
+    let answer: String
+    let fullDefinition: String
+    let partOfSpeech: String
+    let useSentence: String
+    let phonetics: String
+    let level: Int
+    let synonyms: [String]
     
     static func < (lhs: Word, rhs: Word) -> Bool {
         lhs.name < rhs.name

@@ -13,7 +13,7 @@ struct WordView: View {
     var body: some View {
         VStack {
             Text(word.name)
-            Text(word.definition)
+            Text(word.fullDefinition)
         }
     }
 }

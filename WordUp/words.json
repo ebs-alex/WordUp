@@ -2,32 +2,49 @@
 {
     "id":"Abate",
     "name":"Abate",
-    "definition":"to become less active, less intense, or less in amount",
+    "answer":"to lessen.",
+    "fullDefinition":"(Typically of something perceived as hostile, threatening, or negative) to become less intense or widespread.",
+    "partOfSpeech":"verb",
+    "useSentence":"The rain finally began to abate, and we saw a glimpse of sunlight.",
+    "phonetics":"uh-BATE",
+    "level":3,
+    "synonyms": [
+        "decline",
+        "reduce",
+        "taper",
+        "diminish"
+    ],
 },
 {
     "id":"Ambivalence",
     "name":"Ambivalence",
-    "definition":" the state of being uncertain or stuck between two or more options",
+    "fullDefinition":"The state of having mixed feelings or contradictory ideas about something or someone.",
+    "answer":"Unsure or hesitant",
+    "partOfSpeech":"noun",
+    "useSentence":"His ambivalence made it difficult to choose between the two desserts on the menu.",
+    "phonetics":"aM-Biv-Ah-lenz",
+    "level":3,
+    "synonyms": [
+        "Uncertainty",
+        "Confusion",
+        "Irresolution",
+        "Vacillation"
+    ],
 },
 {
     "id":"Analogous",
     "name":"Analogous",
-    "definition":"adj. similar but not identical",
+    "fullDefinition":"Similar in a way that invites comparison : showing an analogy or a likeness that permits one to draw an analogy.",
+    "answer":"Similar but not identical.",
+    "partOfSpeech":"adjective",
+    "useSentence":"The fall of Rome is analgous to our present situation!",
+    "phonetics":"uh-naL-Ah-guess",
+    "level":3,
+    "synonyms": [
+        "Similar",
+        "Alike",
+        "Comparable",
+        "Parallel"
+   ],
 },
-{
-    "id":"Anomaly",
-    "name":"Anomaly",
-    "definition":"n. something different from the norm",
-},
-{
-    "id":"Antipathy",
-    "name":"Antipathy",
-    "definition":"n. a strong feeling of dislike",
-},
-{
-    "id":"Apex",
-    "name":"Apex",
-    "definition":"n. the highest point of something",
-},
-
 ]
