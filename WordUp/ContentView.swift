@@ -16,22 +16,34 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Text("WordUp")
+                    .font(.largeTitle)
                 Spacer()
                 NavigationLink {
                     RandomWordView(word: words[randomWord])
                         .navigationTitle("Random Word")
                 } label: {
-                    Text("Give me random word")
+                    Text("Random Word")
+                        .padding(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.blue, lineWidth: 5)
+                        )
                 }
                 Spacer()
                 NavigationLink {
                     DictionaryView()
                 } label: {
                     Text("Open Dictionary")
+                        .padding(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.blue, lineWidth: 5)
+                        )
                 }
                 Spacer()
             }
-            .navigationTitle("WordUp")
+//            .navigationTitle("WordUp")
             .padding()
             .onAppear {
                 randomWord = Int.random(in: 0...words.count-1)
