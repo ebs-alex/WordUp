@@ -22,6 +22,7 @@ struct DictionaryView: View {
                     }
                 }
             }
+            .preferredColorScheme(.dark)
             .navigationTitle("Dictionary")
             .navigationBarTitleDisplayMode(.large)
 

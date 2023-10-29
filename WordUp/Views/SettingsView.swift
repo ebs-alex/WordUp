@@ -13,6 +13,7 @@ struct SettingsView: View {
             Text("Settings")
                 .navigationTitle("Settings")
                 .navigationBarTitleDisplayMode(.large)
+                .preferredColorScheme(.dark)
         }
     }
 }

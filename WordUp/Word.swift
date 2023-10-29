@@ -21,5 +21,8 @@ struct Word: Codable, Identifiable, Comparable {
     static func < (lhs: Word, rhs: Word) -> Bool {
         lhs.name < rhs.name
     }
-    
+        
+    static let allWords: [Word] = Bundle.main.decode("words.json")
+    static let example = allWords[0]
+
 }

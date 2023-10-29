@@ -29,6 +29,7 @@ struct ExamView: View {
             }
             Spacer()
         }
+        .preferredColorScheme(.dark)
         .padding()
 
     }

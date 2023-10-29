@@ -19,19 +19,23 @@ struct ContentView: View {
                 Color.black
                     .ignoresSafeArea()
                 VStack {
-                    Text("Verbum Operandi")
-                        .font(.largeTitle)
+                    Text("Verbum")
+//                        .font(.largeTitle)
                         .padding(.top, 5)
+                        .font(.custom(
+                                "AmericanTypewriter",
+                                fixedSize: 36))
                     Spacer()
                     NavigationLink {
                         ExamView(word: words[randomWord])
                     } label: {
                         Text("Get to Work")
                             .textAsButton()
+                            .font(.title2)
                     }
                     Spacer()
                     NavigationLink {
-                        RandomWordView(word: words[randomWord])
+                        WordView(word: words[randomWord])
                             .navigationTitle("Random Word")
                     } label: {
                         Text("Random Word")
