@@ -16,8 +16,20 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("WordUp")
+                Text("Verbum Operandi")
                     .font(.largeTitle)
+                    .padding(.top, 5)
+                Spacer()
+                NavigationLink {
+                    ExamView(word: words[randomWord])
+                } label: {
+                    Text("Get to Work")
+                        .padding(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.blue, lineWidth: 3)
+                        )
+                }
                 Spacer()
                 NavigationLink {
                     RandomWordView(word: words[randomWord])
@@ -27,7 +39,7 @@ struct ContentView: View {
                         .padding(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 5)
+                                .stroke(.blue, lineWidth: 3)
                         )
                 }
                 Spacer()
@@ -38,7 +50,18 @@ struct ContentView: View {
                         .padding(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 5)
+                                .stroke(.blue, lineWidth: 3)
+                        )
+                }
+                Spacer()
+                NavigationLink {
+                    SettingsView()
+                } label: {
+                    Text("Settings")
+                        .padding(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.blue, lineWidth: 3)
                         )
                 }
                 Spacer()

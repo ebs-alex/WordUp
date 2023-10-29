@@ -23,8 +23,8 @@ struct DictionaryView: View {
                 }
             }
             .navigationTitle("Dictionary")
-            .navigationBarTitleDisplayMode(.inline)
-            .padding()
+            .navigationBarTitleDisplayMode(.large)
+
         }
     }
 }
