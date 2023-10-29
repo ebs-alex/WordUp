@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FAD486742AEE206E0026B99E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486732AEE206E0026B99E /* SettingsView.swift */; };
 		FAD486762AEE26B90026B99E /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486752AEE26B90026B99E /* ExamView.swift */; };
-		FAD7681F2AEF03F300BB353E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAD7681E2AEF03F300BB353E /* README.md */; };
+		FAD7681F2AEF03F300BB353E /* ToDo.md in Resources */ = {isa = PBXBuildFile; fileRef = FAD7681E2AEF03F300BB353E /* ToDo.md */; };
 		FAEDE20D2AE9D24700A51519 /* WordUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */; };
 		FAEDE20F2AE9D24700A51519 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDE20E2AE9D24700A51519 /* ContentView.swift */; };
 		FAEDE2112AE9D24900A51519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEDE2102AE9D24900A51519 /* Assets.xcassets */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		FAD486732AEE206E0026B99E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FAD486752AEE26B90026B99E /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
-		FAD7681E2AEF03F300BB353E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAD7681E2AEF03F300BB353E /* ToDo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToDo.md; sourceTree = "<group>"; };
 		FAEDE2092AE9D24700A51519 /* WordUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordUpApp.swift; sourceTree = "<group>"; };
 		FAEDE20E2AE9D24700A51519 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		FAEDE20B2AE9D24700A51519 /* WordUp */ = {
 			isa = PBXGroup;
 			children = (
-				FAD7681E2AEF03F300BB353E /* README.md */,
+				FAD7681E2AEF03F300BB353E /* ToDo.md */,
 				FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */,
 				FAEDE2222AE9DC8800A51519 /* ViewModel.swift */,
 				FAD486722AEE1F9D0026B99E /* Views */,
@@ -162,7 +162,7 @@
 			files = (
 				FAEDE21F2AE9D4FC00A51519 /* words.json in Resources */,
 				FAEDE2142AE9D24900A51519 /* Preview Assets.xcassets in Resources */,
-				FAD7681F2AEF03F300BB353E /* README.md in Resources */,
+				FAD7681F2AEF03F300BB353E /* ToDo.md in Resources */,
 				FAEDE2112AE9D24900A51519 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
