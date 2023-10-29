@@ -15,62 +15,51 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Verbum Operandi")
-                    .font(.largeTitle)
-                    .padding(.top, 5)
-                Spacer()
-                NavigationLink {
-                    ExamView(word: words[randomWord])
-                } label: {
-                    Text("Get to Work")
-                        .padding(15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 3)
-                        )
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Verbum Operandi")
+                        .font(.largeTitle)
+                        .padding(.top, 5)
+                    Spacer()
+                    NavigationLink {
+                        ExamView(word: words[randomWord])
+                    } label: {
+                        Text("Get to Work")
+                            .textAsButton()
+                    }
+                    Spacer()
+                    NavigationLink {
+                        RandomWordView(word: words[randomWord])
+                            .navigationTitle("Random Word")
+                    } label: {
+                        Text("Random Word")
+                            .textAsButton()
+                    }
+                    Spacer()
+                    NavigationLink {
+                        DictionaryView()
+                    } label: {
+                        Text("Open Dictionary")
+                            .textAsButton()
+                    }
+                    Spacer()
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
+                        Text("Settings")
+                            .textAsButton()
+                    }
+                    Spacer()
                 }
-                Spacer()
-                NavigationLink {
-                    RandomWordView(word: words[randomWord])
-                        .navigationTitle("Random Word")
-                } label: {
-                    Text("Random Word")
-                        .padding(15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 3)
-                        )
+                .foregroundStyle(.white)
+                .padding()
+                .onAppear {
+                    randomWord = Int.random(in: 0...words.count-1)
                 }
-                Spacer()
-                NavigationLink {
-                    DictionaryView()
-                } label: {
-                    Text("Open Dictionary")
-                        .padding(15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 3)
-                        )
-                }
-                Spacer()
-                NavigationLink {
-                    SettingsView()
-                } label: {
-                    Text("Settings")
-                        .padding(15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 3)
-                        )
-                }
-                Spacer()
             }
-//            .navigationTitle("WordUp")
-            .padding()
-            .onAppear {
-                randomWord = Int.random(in: 0...words.count-1)
-            }
+            
         }
     }
 }
