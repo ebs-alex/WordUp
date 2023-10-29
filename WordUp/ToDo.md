@@ -1,7 +1,4 @@
 
-
-A Vocabulary Eduation App 
-
 To Do: 
 - add DataView
 - Flesh out ExamView
