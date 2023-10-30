@@ -24,7 +24,8 @@ struct ContentView: View {
                         .padding(.top, 5)
                         .font(.custom(
                                 "AmericanTypewriter",
-                                fixedSize: 36))
+                                fixedSize: 45))
+                    Spacer()
                     Spacer()
                     NavigationLink {
                         ExamView(word: words[randomWord])
@@ -53,6 +54,13 @@ struct ContentView: View {
                         SettingsView()
                     } label: {
                         Text("Settings")
+                            .textAsButton()
+                    }
+                    Spacer()
+                    NavigationLink {
+                        DataView()
+                    } label: {
+                        Text("Data")
                             .textAsButton()
                     }
                     Spacer()

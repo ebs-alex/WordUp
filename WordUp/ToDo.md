@@ -1,8 +1,8 @@
 
-To Do: 
-- add DataView
-- Flesh out ExamView
+To Do:
+ 
 - Add Search bar to Dictionary
+- Flesh out ExamView
 - Partially flesh out settings view
 - Add word-array for ExamView
 - Add next button to ExamView

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2FA68B2AF03B2D00A47ED7 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FA68A2AF03B2D00A47ED7 /* DataView.swift */; };
 		FAD486742AEE206E0026B99E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486732AEE206E0026B99E /* SettingsView.swift */; };
 		FAD486762AEE26B90026B99E /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486752AEE26B90026B99E /* ExamView.swift */; };
 		FAD7681F2AEF03F300BB353E /* ToDo.md in Resources */ = {isa = PBXBuildFile; fileRef = FAD7681E2AEF03F300BB353E /* ToDo.md */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2FA68A2AF03B2D00A47ED7 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		FAD486732AEE206E0026B99E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FAD486752AEE26B90026B99E /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
 		FAD7681E2AEF03F300BB353E /* ToDo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToDo.md; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEDE20E2AE9D24700A51519 /* ContentView.swift */,
+				FA2FA68A2AF03B2D00A47ED7 /* DataView.swift */,
 				FAD486752AEE26B90026B99E /* ExamView.swift */,
 				FAEDE2202AE9DA8700A51519 /* DictionaryView.swift */,
 				FAEDE2242AE9DE2400A51519 /* WordView.swift */,
@@ -176,6 +179,7 @@
 			files = (
 				FAEDE20F2AE9D24700A51519 /* ContentView.swift in Sources */,
 				FAEDE2212AE9DA8700A51519 /* DictionaryView.swift in Sources */,
+				FA2FA68B2AF03B2D00A47ED7 /* DataView.swift in Sources */,
 				FAEDE2252AE9DE2400A51519 /* WordView.swift in Sources */,
 				FAD486762AEE26B90026B99E /* ExamView.swift in Sources */,
 				FAD486742AEE206E0026B99E /* SettingsView.swift in Sources */,
