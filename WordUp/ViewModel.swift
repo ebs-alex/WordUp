@@ -37,6 +37,7 @@ struct BlueButton: ButtonStyle {
 struct TitleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.title2)
             .padding(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
@@ -47,7 +48,7 @@ struct TitleModifier: ViewModifier {
 
 extension Text {
     func textAsButton() -> some View {
-        self.bold().italic().lineLimit(4)
+        self.bold().lineLimit(4)
             .modifier(TitleModifier())
     }
 }

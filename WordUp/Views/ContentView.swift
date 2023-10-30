@@ -31,8 +31,8 @@ struct ContentView: View {
                         ExamView(word: words[randomWord])
                     } label: {
                         Text("Get to Work")
+                            .font(.title)
                             .textAsButton()
-                            .font(.title2)
                     }
                     Spacer()
                     NavigationLink {
