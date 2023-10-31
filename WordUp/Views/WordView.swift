@@ -10,6 +10,11 @@ import SwiftUI
 struct WordView: View {
     let word: Word
     
+    private let twoGrid: [GridItem] = [
+        .init(.flexible(), spacing: 2),
+        .init(.flexible(), spacing: 2),
+    ]
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 10) {
@@ -48,13 +53,13 @@ struct WordView: View {
                 }
                 Text("Synonyms:")
                     .font(.title2)
-                HStack {
+                
+                
+                LazyVGrid(columns: twoGrid, spacing: 5) {
                     ForEach(word.synonyms, id: \.self) { syn in
                         Text(syn)
                     }
-                    .frame(maxWidth: .infinity)
                 }
-                .font(.headline)
                 Spacer()
             }
             .padding()

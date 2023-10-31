@@ -10,6 +10,15 @@ import SwiftUI
 struct ExamView: View {
     let word: Word
     
+    var options: [String] {
+        [word.answer, "wrong answer1", "wrong answer2", "wrong answer3"]
+    }
+    
+    private let twoGrid: [GridItem] = [
+        .init(.flexible(), spacing: 2),
+        .init(.flexible(), spacing: 2),
+    ]
+    
     @State private var stage = 0
     
     @State private var definitionOpacity = 0.0
@@ -18,8 +27,8 @@ struct ExamView: View {
     @State private var useSentenceOpacity = 0.0
     @State private var useSentenceShowing = false
     
-    @State private var partofSpeechOpacity = 0.0
-    @State private var partofSpeechShowing = false
+//    @State private var partofSpeechOpacity = 0.0
+//    @State private var partofSpeechShowing = false
     
     @State private var synonymsOpacity = 0.0
     @State private var synonymsShowing = false
@@ -30,29 +39,41 @@ struct ExamView: View {
                 .font(.largeTitle)
                 .padding(.vertical)
             HStack {
-                Text("Level \(word.level)")
-                    .font(.title2)
-                    .padding(.horizontal)
-                    .bold()
-                Spacer()
-            }
-            
-            HStack {
-                Text(word.partOfSpeech)
-                    .font(.title2)
-                    .padding(.horizontal)
-                    .bold()
-//                    .opacity(partofSpeechShowing ? 1.0 : 0.0 )
-                Spacer()
-            }
-            .padding(.vertical,5)
-            Spacer()
-            HStack {
                 Text("\"\(word.phonetics)\"")
                     .font(.title3)
                     .padding(.horizontal)
                 Spacer()
             }
+            HStack {
+                Text(word.partOfSpeech)
+                    .font(.title2)
+                    .padding(.horizontal)
+                    .bold()
+                Spacer()
+                Text("Level \(word.level)")
+                    .font(.title2)
+                    .padding(.horizontal)
+                    .bold()
+            }
+            
+            LazyVGrid(columns: twoGrid, spacing: 2) {
+                ForEach(options, id: \.self) { option in
+                    Button {
+                        
+                    } label: {
+                        Text(option)
+                            .font(.subheadline)
+                            .foregroundStyle(.white)
+                            .textAsButton()
+                            .padding(.vertical)
+                            .frame(width: 150)
+                    }
+                    
+                }
+            }
+            
+            
+           
             .padding(.bottom,5)
             Text(word.fullDefinition)
                 .bold()
@@ -63,22 +84,17 @@ struct ExamView: View {
             Text(word.useSentence)
                 .opacity(useSentenceShowing ? 1.0 : 0.0 )
             Spacer()
-            HStack {
+            
+            LazyVGrid(columns: twoGrid, spacing: 5) {
                 ForEach(word.synonyms, id: \.self) { syn in
                     Text(syn)
                 }
-                .frame(maxWidth: .infinity)
             }
             .opacity(synonymsShowing ? 1.0 : 0.0)
             .font(.headline)
             Spacer()
             
             VStack(spacing: 25) {
-//                Button(partofSpeechShowing ? "Hide Part of Speech" : "Show Part of Speech") {
-//                    withAnimation {
-//                        partofSpeechShowing.toggle()
-//                    }
-//                }
                 if stage == 0 {
                     Button("Use in Sentence") {
                         withAnimation {
@@ -120,14 +136,14 @@ struct ExamView: View {
     }
     
     func nextWord() {
-        resetButtons()
+        reset()
         recordScore()
     }
     
-    func resetButtons() {
-        useSentenceShowing.toggle()
-        synonymsShowing.toggle()
-        definitionShowing.toggle()
+    func reset() {
+        useSentenceShowing = false
+        synonymsShowing = false
+        definitionShowing = false
         stage = 0
     }
     
