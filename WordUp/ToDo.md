@@ -1,6 +1,7 @@
 
 To Do:
 - Flesh out ExamView
+    - add stages and if statements for exam buttons except for "reveal def"
 - Add word-array for ExamView
 - Add next button to ExamView
 - Add multiple choice to ExamView

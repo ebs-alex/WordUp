@@ -10,6 +10,8 @@ import SwiftUI
 struct ExamView: View {
     let word: Word
     
+    @State private var stage = 0
+    
     @State private var definitionOpacity = 0.0
     @State private var definitionShowing = false
     
@@ -34,16 +36,17 @@ struct ExamView: View {
                     .bold()
                 Spacer()
             }
-            Spacer()
+            
             HStack {
                 Text(word.partOfSpeech)
                     .font(.title2)
                     .padding(.horizontal)
                     .bold()
-                    .opacity(partofSpeechShowing ? 1.0 : 0.0 )
+//                    .opacity(partofSpeechShowing ? 1.0 : 0.0 )
                 Spacer()
             }
             .padding(.vertical,5)
+            Spacer()
             HStack {
                 Text("\"\(word.phonetics)\"")
                     .font(.title3)
@@ -71,27 +74,41 @@ struct ExamView: View {
             Spacer()
             
             VStack(spacing: 25) {
-                Button(partofSpeechShowing ? "Hide Part of Speech" : "Show Part of Speech") {
-                    withAnimation {
-                        partofSpeechShowing.toggle()
-                    }
-                }
-
-                Button(useSentenceShowing ? "Hide Use in Sentence" : "Use in Sentence") {
-                    withAnimation {
-                        useSentenceShowing.toggle()
-                    }
-                }
-                
-                Button(synonymsShowing ? "Hide Synonyms" : "Show Synonyms") {
-                    withAnimation {
-                        synonymsShowing.toggle()
+//                Button(partofSpeechShowing ? "Hide Part of Speech" : "Show Part of Speech") {
+//                    withAnimation {
+//                        partofSpeechShowing.toggle()
+//                    }
+//                }
+                if stage == 0 {
+                    Button("Use in Sentence") {
+                        withAnimation {
+                            useSentenceShowing.toggle()
+                            stage = 1
+                        }
                     }
                 }
                 
-                Button(definitionShowing ? "Hide Definition" : "Reveal Definition") {
-                    withAnimation {
-                        definitionShowing.toggle()
+                if stage == 1 {
+                    Button("Show Synonyms") {
+                        withAnimation {
+                            synonymsShowing.toggle()
+                            stage = 2
+                        }
+                    }
+                }
+                
+                if stage == 2 {
+                    Button("Reveal Definition") {
+                        withAnimation {
+                            definitionShowing.toggle()
+                            stage = 3
+                        }
+                    }
+                }
+                
+                if stage == 3 {
+                    Button ("Next Word") {
+                        nextWord()
                     }
                 }
                 
@@ -100,6 +117,22 @@ struct ExamView: View {
         .preferredColorScheme(.dark)
         .padding()
 
+    }
+    
+    func nextWord() {
+        resetButtons()
+        recordScore()
+    }
+    
+    func resetButtons() {
+        useSentenceShowing.toggle()
+        synonymsShowing.toggle()
+        definitionShowing.toggle()
+        stage = 0
+    }
+    
+    func recordScore() {
+        
     }
 }
 
