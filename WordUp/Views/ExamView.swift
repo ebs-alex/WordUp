@@ -27,11 +27,11 @@ struct ExamView: View {
     @State private var useSentenceOpacity = 0.0
     @State private var useSentenceShowing = false
     
-//    @State private var partofSpeechOpacity = 0.0
-//    @State private var partofSpeechShowing = false
-    
     @State private var synonymsOpacity = 0.0
     @State private var synonymsShowing = false
+    
+    @State private var resultMessage = ""
+    @State private var selectionsEnabled = true
     
     var body: some View {
         VStack {
@@ -40,7 +40,7 @@ struct ExamView: View {
                 .padding(.vertical)
             HStack {
                 Text("\"\(word.phonetics)\"")
-                    .font(.title3)
+                    .font(.headline)
                     .padding(.horizontal)
                 Spacer()
             }
@@ -59,7 +59,7 @@ struct ExamView: View {
             LazyVGrid(columns: twoGrid, spacing: 2) {
                 ForEach(options, id: \.self) { option in
                     Button {
-                        
+                        selectionMade(option)
                     } label: {
                         Text(option)
                             .font(.subheadline)
@@ -68,26 +68,31 @@ struct ExamView: View {
                             .padding(.vertical)
                             .frame(width: 150)
                     }
-                    
                 }
+                .allowsHitTesting(selectionsEnabled)
             }
-            
-            
-           
             .padding(.bottom,5)
+            Text(resultMessage)
+                .padding(.bottom,5)
+                .font(.title)
+                .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
             Text(word.fullDefinition)
                 .bold()
                 .font(.title3)
                 .opacity(definitionShowing ? 1.0 : 0.0 )
                 .padding(.horizontal)
             Spacer()
-            Text(word.useSentence)
+            Text("\" \(word.useSentence) \"")
                 .opacity(useSentenceShowing ? 1.0 : 0.0 )
             Spacer()
             
-            LazyVGrid(columns: twoGrid, spacing: 5) {
-                ForEach(word.synonyms, id: \.self) { syn in
-                    Text(syn)
+            Group {
+                Text("Synonyms")
+                    .underline()
+                LazyVGrid(columns: twoGrid, spacing: 5) {
+                    ForEach(word.synonyms, id: \.self) { syn in
+                        Text(syn)
+                    }
                 }
             }
             .opacity(synonymsShowing ? 1.0 : 0.0)
@@ -98,7 +103,7 @@ struct ExamView: View {
                 if stage == 0 {
                     Button("Use in Sentence") {
                         withAnimation {
-                            useSentenceShowing.toggle()
+                            useSentenceShowing = true
                             stage = 1
                         }
                     }
@@ -107,19 +112,14 @@ struct ExamView: View {
                 if stage == 1 {
                     Button("Show Synonyms") {
                         withAnimation {
-                            synonymsShowing.toggle()
+                            synonymsShowing = true
                             stage = 2
                         }
                     }
                 }
                 
                 if stage == 2 {
-                    Button("Reveal Definition") {
-                        withAnimation {
-                            definitionShowing.toggle()
-                            stage = 3
-                        }
-                    }
+
                 }
                 
                 if stage == 3 {
@@ -135,6 +135,24 @@ struct ExamView: View {
 
     }
     
+    func selectionMade(_ selection: String) {
+        withAnimation {
+            definitionShowing = true
+            synonymsShowing = true
+            useSentenceShowing = true
+            stage = 3
+        }
+        
+        selectionsEnabled = false
+        
+        if selection == word.answer {
+            resultMessage = "CORRECT!"
+        } else {
+            resultMessage = "wrong..."
+        }
+
+    }
+    
     func nextWord() {
         reset()
         recordScore()
@@ -145,6 +163,8 @@ struct ExamView: View {
         synonymsShowing = false
         definitionShowing = false
         stage = 0
+        resultMessage = ""
+        selectionsEnabled = true
     }
     
     func recordScore() {
