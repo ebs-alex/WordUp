@@ -1,6 +1,6 @@
 [
 {
-    "id":"Abate",
+    "id":"abate",
     "name":"Abate",
     "answer":"to lessen.",
     "fullDefinition":"To become less intense or widespread (Typically of something perceived as hostile, threatening, or negative).",
@@ -16,7 +16,7 @@
     ],
 },
 {
-    "id":"Ambivalence",
+    "id":"ambivalence",
     "name":"Ambivalence",
     "fullDefinition":"The state of having mixed feelings or contradictory ideas about something or someone.",
     "answer":"Unsure or hesitant",
@@ -31,7 +31,7 @@
     ],
 },
 {
-    "id":"Analogous",
+    "id":"analogous",
     "name":"Analogous",
     "fullDefinition":"Similar in a way that invites comparison : showing an analogy or a likeness that permits one to draw an analogy.",
     "answer":"Similar but not identical.",
@@ -46,4 +46,87 @@
         "Parallel"
    ],
 },
+{
+    "id":"bereft",
+    "name":"Bereft",
+    "fullDefinition":"lacking something needed, wanted, or expected",
+    "answer":"deprived of, lacking",
+    "partOfSpeech":"Adjective",
+    "useSentence":"Her room was stark and bereft of color.",
+    "phonetics":"br-efT",
+    "level":3,
+    "synonyms": [
+        "wanting",
+        "devoid",
+        "without",
+        "lacking"
+   ],
+},
+{
+    "id":"cognizant",
+    "name":"Cognizant",
+    "fullDefinition":"having knowledge or being aware of.",
+    "answer":"aware of",
+    "partOfSpeech":"Adjective",
+    "useSentence":"Statesmen must be cognizant of the political boundaries within which they work.",
+    "phonetics":"Kawg-nih-zint",
+    "level":3,
+    "synonyms": [
+        "abreast",
+        "apprised",
+        "conscious",
+   ],
+},
+{
+    "id":"disrepute",
+    "name":"Disrepute",
+    "fullDefinition":"state of low public esteem",
+    "answer":"public disgrace",
+    "partOfSpeech":"Noun",
+    "useSentence":"Behaviour like this brings the entire industry into disrepute.",
+    "phonetics":"dis-rih-pyoot",
+    "level":3,
+    "synonyms": [
+        "disgrace",
+        "shame",
+        "infamy",
+   ],
+},
+{
+    "id":"acumen",
+    "name":"Acumen",
+    "fullDefinition":"The ability to make good judgments and quick decisions, typically in a particular domain",
+    "answer":"Skill & wit",
+    "partOfSpeech":"Noun",
+    "useSentence":"He will need all his political acumen in these negotiations",
+    "phonetics":"ah-kyuh-men",
+    "level":3,
+    "synonyms": [
+        "Astuteness",
+        "Sharp",
+        "Cleverness",
+        "Savvy",
+   ],
+},
+{
+    "id":"impinge",
+    "name":"Impinge",
+    "fullDefinition":"have an effect or impact, especially a negative one",
+    "answer":"disturb",
+    "partOfSpeech":"Verb",
+    "useSentence":"mobile technology makes it easier for work to impinge on family life",
+    "phonetics":"ihm-pinj",
+    "level":3,
+    "synonyms": [
+        "Encroach",
+        "Infringe",
+        "Meddle",
+        "Affect",
+   ],
+},
+
+
+
+
+
 ]
