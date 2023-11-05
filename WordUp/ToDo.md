@@ -10,3 +10,6 @@ To Do:
 - Add Favorites function to Dictionary
 - Add favorites function to random word and exam view
 
+
+
+? How will we keep similar answers from appearing for a word that can take both defintions?
