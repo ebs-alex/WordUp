@@ -8,23 +8,11 @@
 import Foundation
 import SwiftUI
 
-extension ContentView {
-    @MainActor class ViewModel: ObservableObject {
-        
-        
-        
+@MainActor class ViewModel: ObservableObject {
 
- 
-        
-        
-//        func randomWord() {
-//            
-//        }
-        
 
-    }
-    
 }
+
 
 struct BlueButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {

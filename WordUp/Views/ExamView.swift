@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExamView: View {
+    @EnvironmentObject var viewModel: ViewModel;
+    
     let word: Word
     
     var options: [String] {

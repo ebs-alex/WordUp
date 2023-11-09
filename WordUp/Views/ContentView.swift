@@ -72,6 +72,7 @@ struct ContentView: View {
             }
             
         }
+        .environmentObject(viewModel)
     }
 }
 

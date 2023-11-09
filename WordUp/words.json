@@ -102,6 +102,7 @@
         "conscious",
    ],
     "similarAnswers": [
+        "Perceptiveness",
         
     ],
     "metaTags": [
@@ -145,6 +146,7 @@
         "Savvy",
    ],
     "similarAnswers": [
+        "Perceptiveness",
         
     ],
     "metaTags": [
@@ -301,8 +303,6 @@
         
     ],
 },
-
-
 {
     "id":"panoply",
     "name":"Panoply",
@@ -318,6 +318,29 @@
         "Array",
    ],
     "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"perspicacity",
+    "name":"Perspicacity",
+    "fullDefinition":"Keenness of mental perception and understanding.",
+    "answer":"Perceptiveness",
+    "partOfSpeech":"Noun",
+    "useSentence":"Drinking heavily had distracted his watchfulness and obscured his perspicacity.",
+    "phonetics":"pur-spuh-ka-suh-tee",
+    "level":3,
+    "synonyms": [
+        "Astuteness",
+        "Acuity",
+        "Discernment",
+   ],
+    "similarAnswers": [
+        "Skill & wit",
+        "aware of",
         
     ],
     "metaTags": [
