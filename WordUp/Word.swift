@@ -17,6 +17,8 @@ struct Word: Codable, Identifiable, Comparable {
     let phonetics: String
     let level: Int
     let synonyms: [String]
+    let similarAnswers: [String]
+    let metaTags: [String]
     
     static func < (lhs: Word, rhs: Word) -> Bool {
         lhs.name < rhs.name

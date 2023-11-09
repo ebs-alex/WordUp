@@ -10,6 +10,7 @@ import SwiftUI
 struct WordView: View {
     let word: Word
     
+    
     private let twoGrid: [GridItem] = [
         .init(.flexible(), spacing: 2),
         .init(.flexible(), spacing: 2),
@@ -61,12 +62,18 @@ struct WordView: View {
                     }
                 }
                 Spacer()
+                
+//                if (word.similarAnswers != []) {
+//                    Text(word.similarAnswers[0])
+//                }
+                
             }
             .padding()
             .navigationTitle(Text(word.name))
             .navigationBarTitleDisplayMode(.large)
             .preferredColorScheme(.dark)
         }
+        
     }
 }
 

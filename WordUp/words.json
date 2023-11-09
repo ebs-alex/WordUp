@@ -14,6 +14,13 @@
         "taper",
         "diminish"
     ],
+    "similarAnswers": [
+        "testing123",
+        "123testing"
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"ambivalence",
@@ -28,6 +35,12 @@
         "Uncertainty",
         "Confusion",
         "Vacillation"
+    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
     ],
 },
 {
@@ -45,6 +58,12 @@
         "Comparable",
         "Parallel"
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"bereft",
@@ -61,6 +80,12 @@
         "without",
         "lacking"
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"cognizant",
@@ -76,6 +101,12 @@
         "apprised",
         "conscious",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"disrepute",
@@ -91,6 +122,12 @@
         "shame",
         "infamy",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"acumen",
@@ -107,6 +144,12 @@
         "Cleverness",
         "Savvy",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"impinge",
@@ -123,6 +166,12 @@
         "Meddle",
         "Affect",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"pejorative",
@@ -138,6 +187,12 @@
         "Insulting",
         "Disparaging",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"phlegmatic",
@@ -154,6 +209,12 @@
         "Controlled",
         "Poised",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"predilection",
@@ -170,6 +231,12 @@
         "Inclination",
         "Fancy",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"terse",
@@ -185,6 +252,12 @@
         "Curt",
         "Concise",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 {
     "id":"fortuitous",
@@ -200,8 +273,57 @@
         "Serendipitous",
         "Fluke",
    ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"loquacity",
+    "name":"Loquacity",
+    "fullDefinition":"talkativeness, esp. when excessive.",
+    "answer":"Talkative",
+    "partOfSpeech":"Noun",
+    "useSentence":"Steve, who knew his son's tendency toward unnecessary loquacity as well as I did, replied for him.",
+    "phonetics":"low-kwa-suh-tee",
+    "level":4,
+    "synonyms": [
+        "Verbosity",
+        "Chattiness",
+        "garrulity",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
 },
 
+
+{
+    "id":"panoply",
+    "name":"Panoply",
+    "fullDefinition":"an exravagant display or impressive collection of things.",
+    "answer":"Exhibition",
+    "partOfSpeech":"Noun",
+    "useSentence":"All the panoply of Western religious liturgy",
+    "phonetics":"pan-uh-plee",
+    "level":4,
+    "synonyms": [
+        "Collection",
+        "Regalia",
+        "Array",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
 
 
 ]

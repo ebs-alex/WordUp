@@ -19,8 +19,7 @@ struct ContentView: View {
                 Color.black
                     .ignoresSafeArea()
                 VStack {
-                    Text("Verbum")
-//                        .font(.largeTitle)
+                    Text("Brute Words")
                         .padding(.top, 5)
                         .font(.custom(
                                 "AmericanTypewriter",

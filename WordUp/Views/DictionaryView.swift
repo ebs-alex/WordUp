@@ -29,6 +29,8 @@ struct DictionaryView: View {
                         Text(word.name)
                     }
                 }
+                Text("Displaying: \(sortedResults.count) words")
+                    .font(.footnote)
             }
             .searchable(text: $searchText, prompt: "Search Words")
             .preferredColorScheme(.dark)
