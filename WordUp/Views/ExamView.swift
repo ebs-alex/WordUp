@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ExamView: View {
-    @EnvironmentObject var viewModel: ViewModel;
+    @EnvironmentObject var vm: ViewModel;
     
     let word: Word
     
     var options: [String] {
-        [word.answer, "wrong answer1", "wrong answer2", "wrong answer3"]
+        [vm.currentExamWord.answer, "wrong answer1", "wrong answer2", "wrong answer3"]
     }
     
     private let twoGrid: [GridItem] = [
@@ -37,22 +37,22 @@ struct ExamView: View {
     
     var body: some View {
         VStack {
-            Text(word.name)
+            Text(vm.currentExamWord.name)
                 .font(.largeTitle)
                 .padding(.vertical)
             HStack {
-                Text("\"\(word.phonetics)\"")
+                Text("\"\(vm.currentExamWord.phonetics)\"")
                     .font(.headline)
                     .padding(.horizontal)
                 Spacer()
             }
             HStack {
-                Text(word.partOfSpeech)
+                Text(vm.currentExamWord.partOfSpeech)
                     .font(.title2)
                     .padding(.horizontal)
                     .bold()
                 Spacer()
-                Text("Level \(word.level)")
+                Text("Level \(vm.currentExamWord.level)")
                     .font(.title2)
                     .padding(.horizontal)
                     .bold()
@@ -65,7 +65,9 @@ struct ExamView: View {
                     } label: {
                         Text(option)
                             .font(.subheadline)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(selectionsEnabled != false ? .white 
+                                : option == vm.currentExamWord.answer ? .green
+                                        : .red)
                             .textAsButton()
                             .padding(.vertical)
                             .frame(width: 150)
@@ -78,13 +80,13 @@ struct ExamView: View {
                 .padding(.bottom,5)
                 .font(.title)
                 .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
-            Text(word.fullDefinition)
+            Text(vm.currentExamWord.fullDefinition)
                 .bold()
                 .font(.title3)
                 .opacity(definitionShowing ? 1.0 : 0.0 )
                 .padding(.horizontal)
             Spacer()
-            Text("\" \(word.useSentence) \"")
+            Text("\" \(vm.currentExamWord.useSentence) \"")
                 .opacity(useSentenceShowing ? 1.0 : 0.0 )
             Spacer()
             
@@ -92,7 +94,7 @@ struct ExamView: View {
                 Text("Synonyms")
                     .underline()
                 LazyVGrid(columns: twoGrid, spacing: 5) {
-                    ForEach(word.synonyms, id: \.self) { syn in
+                    ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
                         Text(syn)
                     }
                 }
@@ -121,15 +123,16 @@ struct ExamView: View {
                 }
                 
                 if stage == 2 {
-
+                    //
                 }
+                
                 
                 if stage == 3 {
                     Button ("Next Word") {
-                        nextWord()
+                        vm.nextWord()
+                        reset()
                     }
                 }
-                
             }
         }
         .preferredColorScheme(.dark)
@@ -147,7 +150,7 @@ struct ExamView: View {
         
         selectionsEnabled = false
         
-        if selection == word.answer {
+        if selection == vm.currentExamWord.answer {
             resultMessage = "CORRECT!"
         } else {
             resultMessage = "wrong..."
@@ -176,4 +179,5 @@ struct ExamView: View {
 
 #Preview {
     ExamView(word: Word.example)
+        .environmentObject(ViewModel())
 }

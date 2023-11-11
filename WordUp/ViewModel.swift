@@ -9,9 +9,41 @@ import Foundation
 import SwiftUI
 
 @MainActor class ViewModel: ObservableObject {
+    
+    let words: [Word] = Bundle.main.decode("words.json")
+    @Published var currentExamWord: Word
+    var randomWord: Int
+    
+    
+    init() {
+        self.randomWord = Int.random(in: 0...words.count-1)
+        self.currentExamWord = words[randomWord]
+    }
+    
 
-
+    func nextWord() {
+        self.randomWord = Int.random(in: 0...words.count-1)
+        self.currentExamWord = words[randomWord]
+//        reset()
+        recordScore()
+    }
+    
+    
+//    func reset() {
+//        useSentenceShowing = false
+//        synonymsShowing = false
+//        definitionShowing = false
+//        stage = 0
+//        resultMessage = ""
+//        selectionsEnabled = true
+//    }
+    
+    func recordScore() {
+        
+    }
+    
 }
+
 
 
 struct BlueButton: ButtonStyle {
