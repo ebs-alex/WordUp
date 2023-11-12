@@ -27,7 +27,7 @@ struct ContentView: View {
                     Spacer()
                     Spacer()
                     NavigationLink {
-                        ExamView(word: words[randomWord])
+                        ExamView()
                     } label: {
                         Text("Get to Work")
                             .font(.title)

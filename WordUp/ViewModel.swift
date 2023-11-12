@@ -13,12 +13,51 @@ import SwiftUI
     let words: [Word] = Bundle.main.decode("words.json")
     @Published var currentExamWord: Word
     var randomWord: Int
+    var options = [String]()
+    
     
     
     init() {
         self.randomWord = Int.random(in: 0...words.count-1)
         self.currentExamWord = words[randomWord]
+        self.options = generateOptions()
     }
+    
+    
+    func generateOptions() -> [String] {
+        
+        var options = [String]()
+        
+        let answer = currentExamWord.answer
+        var wrong1: String;
+        var wrong2: String;
+        var wrong3: String;
+        
+        options.append(answer)
+        
+        repeat {
+            let randomIndex = Int.random(in: 0...words.count-1)
+            wrong1 = words[randomIndex].answer
+        } while wrong1 == answer
+        options.append(wrong1)
+        
+        repeat {
+            let randomIndex = Int.random(in: 0...words.count-1)
+            wrong2 = words[randomIndex].answer
+        } while options.contains(wrong2)
+        options.append(wrong2)
+        
+        
+        repeat {
+            let randomIndex = Int.random(in: 0...words.count-1)
+            wrong3 = words[randomIndex].answer
+        } while options.contains(wrong3)
+        options.append(wrong3)
+        
+        return options.shuffled()
+    }
+    
+    
     
 
     func nextWord() {
@@ -26,6 +65,7 @@ import SwiftUI
         self.currentExamWord = words[randomWord]
 //        reset()
         recordScore()
+        options = generateOptions()
     }
     
     

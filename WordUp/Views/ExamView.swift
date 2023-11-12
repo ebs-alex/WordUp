@@ -10,12 +10,6 @@ import SwiftUI
 struct ExamView: View {
     @EnvironmentObject var vm: ViewModel;
     
-    let word: Word
-    
-    var options: [String] {
-        [vm.currentExamWord.answer, "wrong answer1", "wrong answer2", "wrong answer3"]
-    }
-    
     private let twoGrid: [GridItem] = [
         .init(.flexible(), spacing: 2),
         .init(.flexible(), spacing: 2),
@@ -59,7 +53,7 @@ struct ExamView: View {
             }
             
             LazyVGrid(columns: twoGrid, spacing: 2) {
-                ForEach(options, id: \.self) { option in
+                ForEach(vm.options, id: \.self) { option in
                     Button {
                         selectionMade(option)
                     } label: {
@@ -137,6 +131,9 @@ struct ExamView: View {
         }
         .preferredColorScheme(.dark)
         .padding()
+        .onAppear {
+//            vm.options.shuffle()
+        }
 
     }
     
@@ -178,6 +175,6 @@ struct ExamView: View {
 }
 
 #Preview {
-    ExamView(word: Word.example)
+    ExamView()
         .environmentObject(ViewModel())
 }

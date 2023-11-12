@@ -368,6 +368,27 @@
         
     ],
 },
+{
+    "id":"indefatigable",
+    "name":"Indefatigable",
+    "fullDefinition":"Incapable of being tired out; not yielding to fatigue.",
+    "answer":"tireless",
+    "partOfSpeech":"Adjective",
+    "useSentence":"An indefatigable defender of human rights.",
+    "phonetics":"in-duh-fa-tuh-guh-bl",
+    "level":3,
+    "synonyms": [
+        "Unwavering",
+        "Indomitable",
+        "Unrelenting",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
 
 
 ]
