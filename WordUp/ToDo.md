@@ -1,7 +1,7 @@
 
 To Do:
 - Add more words
-- Add actual wrong answers to examView 
+- exam view options need more consistent sizing
 
 - transfer properties and methods to viewModel
 

@@ -96,6 +96,7 @@ struct BlueButton: ButtonStyle {
     }
 }
 
+
 struct TitleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -113,4 +114,16 @@ extension Text {
         self.bold().lineLimit(4)
             .modifier(TitleModifier())
     }
+    
+    func optionStyle() -> some View {
+        self.bold().lineLimit(4)
+            .font(.title2)
+            .frame(width: 150, height: 80)
+            .padding(5)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(.blue, lineWidth: 2)
+            )
+    }
+        
 }

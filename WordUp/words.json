@@ -73,7 +73,7 @@
     "partOfSpeech":"Adjective",
     "useSentence":"Her room was stark and bereft of color.",
     "phonetics":"br-efT",
-    "level":3,
+    "level":4,
     "synonyms": [
         "wanting",
         "devoid",
@@ -204,7 +204,7 @@
     "partOfSpeech":"Adjective",
     "useSentence":"Even the normally phlegmatic Commander was grinning like a maniac..",
     "phonetics":"fleg-ma-dik",
-    "level":3,
+    "level":4,
     "synonyms": [
         "Calm",
         "Composed",
@@ -226,7 +226,7 @@
     "partOfSpeech":"Noun",
     "useSentence":"She has a predilection for Asian food.",
     "phonetics":"pree-dih-lik-shin",
-    "level":3,
+    "level":4,
     "synonyms": [
         "Preference",
         "Penchant",
@@ -332,7 +332,7 @@
     "partOfSpeech":"Noun",
     "useSentence":"Drinking heavily had distracted his watchfulness and obscured his perspicacity.",
     "phonetics":"pur-spuh-ka-suh-tee",
-    "level":3,
+    "level":4,
     "synonyms": [
         "Astuteness",
         "Acuity",
@@ -355,7 +355,7 @@
     "partOfSpeech":"Noun",
     "useSentence":"She is interested in both the theory and praxis of criminology.",
     "phonetics":"prak-suhs",
-    "level":3,
+    "level":4,
     "synonyms": [
         "Practice",
         "Custom",
@@ -381,6 +381,88 @@
         "Unwavering",
         "Indomitable",
         "Unrelenting",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"chagrin",
+    "name":"Chagrin",
+    "fullDefinition":"disquietude or distress caused by humiliation, disappointment, or failure.",
+    "answer":"displeasure",
+    "partOfSpeech":"Noun",
+    "useSentence":"An indefatigable defender of human rights.",
+    "phonetics":"sha-grin",
+    "level":4,
+    "synonyms": [
+        "Vexation",
+        "Distress",
+        "Frustration",
+        "Annoyance",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"bovine",
+    "name":"Bovine",
+    "fullDefinition":"Having to do with cows or cattle. as pejorative; dull, dim-witted",
+    "answer":"Cow-like",
+    "partOfSpeech":"Adjective",
+    "useSentence":"He had a gentle, slightly bovine expression.",
+    "phonetics":"bow-vine",
+    "level":4,
+    "synonyms": [
+        "Dim-witted",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"simian",
+    "name":"Simian",
+    "fullDefinition":"Relating to, resembling, or affecting apes or monkeys.",
+    "answer":"Monkey",
+    "partOfSpeech":"Noun",
+    "useSentence":"A polymerase chain reaction analysis for simian virus 40 DNA was negative.",
+    "phonetics":"sih-mee-uhn",
+    "level":4,
+    "synonyms": [
+        "anthropoid",
+   ],
+    "similarAnswers": [
+
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"sycophant",
+    "name":"Sycophant",
+    "fullDefinition":"A servile self-seeking flatterer.",
+    "answer":"suck-up",
+    "partOfSpeech":"Noun",
+    "useSentence":"His high-rank attracts all sorts of sycophants",
+    "phonetics":"sih-kah-fnt",
+    "level":4,
+    "synonyms": [
+        "Groupy",
+        "Fawner",
+        "Groveler",
+        "Brown-nose"
    ],
     "similarAnswers": [
         

@@ -52,7 +52,7 @@ struct ExamView: View {
                     .bold()
             }
             
-            LazyVGrid(columns: twoGrid, spacing: 2) {
+            LazyVGrid(columns: twoGrid, spacing: 10) {
                 ForEach(vm.options, id: \.self) { option in
                     Button {
                         selectionMade(option)
@@ -62,9 +62,7 @@ struct ExamView: View {
                             .foregroundStyle(selectionsEnabled != false ? .white 
                                 : option == vm.currentExamWord.answer ? .green
                                         : .red)
-                            .textAsButton()
-                            .padding(.vertical)
-                            .frame(width: 150)
+                            .optionStyle()
                     }
                 }
                 .allowsHitTesting(selectionsEnabled)
@@ -74,29 +72,31 @@ struct ExamView: View {
                 .padding(.bottom,5)
                 .font(.title)
                 .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
-            Text(vm.currentExamWord.fullDefinition)
-                .bold()
-                .font(.title3)
-                .opacity(definitionShowing ? 1.0 : 0.0 )
-                .padding(.horizontal)
-            Spacer()
-            Text("\" \(vm.currentExamWord.useSentence) \"")
-                .opacity(useSentenceShowing ? 1.0 : 0.0 )
-            Spacer()
             
-            Group {
-                Text("Synonyms")
-                    .underline()
-                LazyVGrid(columns: twoGrid, spacing: 5) {
-                    ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
-                        Text(syn)
+            ScrollView {
+                Text(vm.currentExamWord.fullDefinition)
+                    .bold()
+                    .font(.title3)
+                    .opacity(definitionShowing ? 1.0 : 0.0 )
+                    .padding()
+                Spacer()
+                Text("\"\(vm.currentExamWord.useSentence)\"")
+                    .opacity(useSentenceShowing ? 1.0 : 0.0 )
+                Spacer()
+                
+                Group {
+                    Text("Synonyms")
+                        .underline()
+                    LazyVGrid(columns: twoGrid, spacing: 5) {
+                        ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
+                            Text(syn)
+                        }
                     }
                 }
+                .opacity(synonymsShowing ? 1.0 : 0.0)
+                .font(.headline)
+                Spacer()
             }
-            .opacity(synonymsShowing ? 1.0 : 0.0)
-            .font(.headline)
-            Spacer()
-            
             VStack(spacing: 25) {
                 if stage == 0 {
                     Button("Use in Sentence") {
@@ -131,9 +131,6 @@ struct ExamView: View {
         }
         .preferredColorScheme(.dark)
         .padding()
-        .onAppear {
-//            vm.options.shuffle()
-        }
 
     }
     
