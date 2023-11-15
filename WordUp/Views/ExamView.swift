@@ -37,34 +37,29 @@ struct ExamView: View {
         VStack {
             HStack {
                 Text(vm.currentExamWord.name)
-                    .font(.largeTitle)
-                    .padding()
+                    .font(.custom(
+                                "AmericanTypewriter",
+                                size: 35,
+                                relativeTo: .largeTitle))
+                    .padding(3)
+                    .bold()
                 Spacer()
                 VStack {
                     Text("Points won today")
                         .font(.footnote)
-                    Text("000")
+                    Text("0000")
                         .font(.headline)
                 }
                 .foregroundStyle(.green)
             }
-            .padding(.bottom)
             HStack {
-                Text("\"\(vm.currentExamWord.phonetics)\"")
-                    .font(.headline)
-                    .padding(.horizontal)
-                Spacer()
-            }
-            HStack {
-                Text(vm.currentExamWord.partOfSpeech)
-                    .font(.title2)
-                    .padding(.horizontal)
-                    .bold()
                 Spacer()
                 Text("Level \(vm.currentExamWord.level)")
                     .font(.title2)
                     .padding(.horizontal)
+                    .italic()
                     .bold()
+                Spacer()
             }
             
             LazyVGrid(columns: twoGrid, spacing: 10) {
@@ -91,8 +86,8 @@ struct ExamView: View {
                         .font(.title3)
                         .bold()
                 } else {
-                    Text(resultMessage == "CORRECT!" ? "Point Won:   \(vm.earnablePoints)" : "Point Won:   -\(vm.earnablePoints)" )
-                        .padding()
+                    Text(resultMessage == "CORRECT!" ? "Points Won:   \(vm.earnablePoints)" : "Points Won:   -\(vm.earnablePoints)" )
+                        .padding([.horizontal, .top])
                         .font(.title3)
                         .bold()
                         .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
@@ -106,30 +101,46 @@ struct ExamView: View {
                 .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
             
             ScrollView {
-                Text(vm.currentExamWord.fullDefinition)
-                    .bold()
-                    .font(.title3)
-                    .opacity(definitionShowing ? 1.0 : 0.0 )
-                    .padding()
-                Spacer()
-                Text("\"\(vm.currentExamWord.useSentence)\"")
-                    .opacity(useSentenceShowing ? 1.0 : 0.0 )
-                    .font(.subheadline)
-                    .padding(.bottom)
-                Spacer()
-                
-                Group {
-                    Text("Synonyms")
-                        .underline()
-                    LazyVGrid(columns: twoGrid, spacing: 5) {
-                        ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
-                            Text(syn)
+                VStack {
+                    HStack {
+                        Text("\"\(vm.currentExamWord.phonetics)\"")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(vm.currentExamWord.partOfSpeech)
+                            .font(.title2)
+                            .padding(.horizontal)
+                            .bold()
+                        Spacer()
+                    }
+                    Text(vm.currentExamWord.fullDefinition)
+                        .bold()
+                        .font(.title3)
+                        .opacity(definitionShowing ? 1.0 : 0.0 )
+                        .padding()
+                    Spacer()
+                    Text("\"\(vm.currentExamWord.useSentence)\"")
+                        .opacity(useSentenceShowing ? 1.0 : 0.0 )
+                        .font(.subheadline)
+                        .padding(.bottom)
+                    Spacer()
+                    
+                    Group {
+                        Text("Synonyms")
+                            .underline()
+                        LazyVGrid(columns: twoGrid, spacing: 5) {
+                            ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
+                                Text(syn)
+                            }
                         }
                     }
+                    .opacity(synonymsShowing ? 1.0 : 0.0)
+                    .font(.headline)
+                    Spacer()
                 }
-                .opacity(synonymsShowing ? 1.0 : 0.0)
-                .font(.headline)
-                Spacer()
+//                .scrollIndicators(.visible)
             }
             VStack(spacing: 25) {
                 if stage == 0 {

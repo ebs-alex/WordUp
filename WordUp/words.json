@@ -72,7 +72,7 @@
     "answer":"deprived of, lacking",
     "partOfSpeech":"Adjective",
     "useSentence":"Her room was stark and bereft of color.",
-    "phonetics":"br-efT",
+    "phonetics":"bih-refT",
     "level":4,
     "synonyms": [
         "wanting",
@@ -179,7 +179,7 @@
     "id":"pejorative",
     "name":"Pejorative",
     "fullDefinition":"having negative connotations",
-    "answer":"disturb",
+    "answer":"Derisive",
     "partOfSpeech":"Adjective",
     "useSentence":"Most of what he said was inflammatory and filled with pejoratives.",
     "phonetics":"puh-jo-ruh-tuhv",
@@ -485,6 +485,28 @@
         "Needless",
         "Expendable",
         "Excessive",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
+{
+    "id":"irascible",
+    "name":"Irascible",
+    "fullDefinition":"Having or showing a tendency to be easily angered.",
+    "answer":"Irritable",
+    "partOfSpeech":"Adjective",
+    "useSentence":"That house belongs to an irascible crank who never has a kind word for any neighbor.",
+    "phonetics":"ih-ra-suh-bul",
+    "level":3,
+    "synonyms": [
+        "Crabby",
+        "Snappy",
+        "Grouchy",
+        "Cranky",
    ],
     "similarAnswers": [
         
