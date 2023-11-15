@@ -29,11 +29,26 @@ struct ExamView: View {
     @State private var resultMessage = ""
     @State private var selectionsEnabled = true
     
+    @State private var showingEarnable = true
+ 
+    
+    
     var body: some View {
         VStack {
-            Text(vm.currentExamWord.name)
-                .font(.largeTitle)
-                .padding(.vertical)
+            HStack {
+                Text(vm.currentExamWord.name)
+                    .font(.largeTitle)
+                    .padding()
+                Spacer()
+                VStack {
+                    Text("Points won today")
+                        .font(.footnote)
+                    Text("000")
+                        .font(.headline)
+                }
+                .foregroundStyle(.green)
+            }
+            .padding(.bottom)
             HStack {
                 Text("\"\(vm.currentExamWord.phonetics)\"")
                     .font(.headline)
@@ -68,6 +83,23 @@ struct ExamView: View {
                 .allowsHitTesting(selectionsEnabled)
             }
             .padding(.bottom,5)
+            
+            HStack {
+                if showingEarnable {
+                    Text("Earnable Points:   \(vm.earnablePoints)")
+                        .padding()
+                        .font(.title3)
+                        .bold()
+                } else {
+                    Text(resultMessage == "CORRECT!" ? "Point Won:   \(vm.earnablePoints)" : "Point Won:   -\(vm.earnablePoints)" )
+                        .padding()
+                        .font(.title3)
+                        .bold()
+                        .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
+                }
+                Spacer()
+            }
+            
             Text(resultMessage)
                 .padding(.bottom,5)
                 .font(.title)
@@ -82,6 +114,8 @@ struct ExamView: View {
                 Spacer()
                 Text("\"\(vm.currentExamWord.useSentence)\"")
                     .opacity(useSentenceShowing ? 1.0 : 0.0 )
+                    .font(.subheadline)
+                    .padding(.bottom)
                 Spacer()
                 
                 Group {
@@ -102,6 +136,7 @@ struct ExamView: View {
                     Button("Use in Sentence") {
                         withAnimation {
                             useSentenceShowing = true
+                            vm.earnablePoints -= vm.currentExamWord.level
                             stage = 1
                         }
                     }
@@ -111,6 +146,7 @@ struct ExamView: View {
                     Button("Show Synonyms") {
                         withAnimation {
                             synonymsShowing = true
+                            vm.earnablePoints -= vm.currentExamWord.level
                             stage = 2
                         }
                     }
@@ -124,7 +160,7 @@ struct ExamView: View {
                 if stage == 3 {
                     Button ("Next Word") {
                         vm.nextWord()
-                        reset()
+                        resetExamView()
                     }
                 }
             }
@@ -139,6 +175,7 @@ struct ExamView: View {
             definitionShowing = true
             synonymsShowing = true
             useSentenceShowing = true
+            showingEarnable = false
             stage = 3
         }
         
@@ -152,23 +189,17 @@ struct ExamView: View {
 
     }
     
-    func nextWord() {
-        reset()
-        recordScore()
-    }
     
-    func reset() {
+    func resetExamView() {
         useSentenceShowing = false
         synonymsShowing = false
         definitionShowing = false
         stage = 0
         resultMessage = ""
         selectionsEnabled = true
+        showingEarnable = true
     }
-    
-    func recordScore() {
-        
-    }
+
 }
 
 #Preview {

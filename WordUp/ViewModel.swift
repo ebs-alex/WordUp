@@ -14,6 +14,7 @@ import SwiftUI
     @Published var currentExamWord: Word
     var randomWord: Int
     var options = [String]()
+    var earnablePoints: Int = 0
     
     
     
@@ -21,6 +22,7 @@ import SwiftUI
         self.randomWord = Int.random(in: 0...words.count-1)
         self.currentExamWord = words[randomWord]
         self.options = generateOptions()
+        self.earnablePoints = calcEarnablePoints()
     }
     
     
@@ -58,14 +60,19 @@ import SwiftUI
     }
     
     
+    func calcEarnablePoints() -> Int {
+        
+        return currentExamWord.level * 3
+    }
     
 
     func nextWord() {
-        self.randomWord = Int.random(in: 0...words.count-1)
-        self.currentExamWord = words[randomWord]
+        randomWord = Int.random(in: 0...words.count-1)
+        currentExamWord = words[randomWord]
 //        reset()
         recordScore()
         options = generateOptions()
+        earnablePoints = calcEarnablePoints()
     }
     
     

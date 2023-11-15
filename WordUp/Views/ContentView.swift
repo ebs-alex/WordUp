@@ -25,7 +25,6 @@ struct ContentView: View {
                                 "AmericanTypewriter",
                                 fixedSize: 45))
                     Spacer()
-                    Spacer()
                     NavigationLink {
                         ExamView()
                     } label: {

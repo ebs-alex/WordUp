@@ -471,6 +471,28 @@
         
     ],
 },
+{
+    "id":"superfluous",
+    "name":"Superfluous",
+    "fullDefinition":"Unnecessary, especially through being more than enough.",
+    "answer":"Redundant",
+    "partOfSpeech":"Adjective",
+    "useSentence":"Delete the superfluous details.",
+    "phonetics":"soo-per-floo-uhs",
+    "level":3,
+    "synonyms": [
+        "Extra",
+        "Needless",
+        "Expendable",
+        "Excessive",
+   ],
+    "similarAnswers": [
+        
+    ],
+    "metaTags": [
+        
+    ],
+},
 
 
 ]
