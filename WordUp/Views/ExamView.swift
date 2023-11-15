@@ -110,21 +110,31 @@ struct ExamView: View {
                     }
                     HStack {
                         Text(vm.currentExamWord.partOfSpeech)
-                            .font(.title2)
+                            .font(.title3)
                             .padding(.horizontal)
                             .bold()
                         Spacer()
                     }
-                    Text(vm.currentExamWord.fullDefinition)
-                        .bold()
-                        .font(.title3)
-                        .opacity(definitionShowing ? 1.0 : 0.0 )
-                        .padding()
-                    Spacer()
-                    Text("\"\(vm.currentExamWord.useSentence)\"")
-                        .opacity(useSentenceShowing ? 1.0 : 0.0 )
-                        .font(.subheadline)
-                        .padding(.bottom)
+                    VStack {
+                        Text("\(vm.currentExamWord.fullDefinition)")
+//                            .bold()
+                            .font(.title2)
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                            .multilineTextAlignment(.center)
+//                            .border(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(.white, lineWidth: 0.5)
+                            )
+                            .opacity(definitionShowing ? 1.0 : 0.0 )
+                        Spacer()
+                        Text("\"\(vm.currentExamWord.useSentence)\"")
+                            .opacity(useSentenceShowing ? 1.0 : 0.0 )
+                            .font(.headline)
+                            .padding(.vertical)
+                    }
+                    
                     Spacer()
                     
                     Group {
