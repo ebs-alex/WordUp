@@ -8,14 +8,19 @@
 import Foundation
 import SwiftUI
 
-@MainActor class ViewModel: ObservableObject {
+@MainActor class ExamModel: ObservableObject {
+    
+    enum roundResults {
+        case won, lost, neutral
+    }
     
     let words: [Word] = Bundle.main.decode("words.json")
     @Published var currentExamWord: Word
     var randomWord: Int
     var options = [String]()
     var earnablePoints: Int = 0
-    
+    var roundResult: roundResults = .neutral
+    var helpCount = 0
     
     
     init() {
@@ -66,13 +71,15 @@ import SwiftUI
     }
     
 
-    func nextWord() {
+    func nextWord(_ result: roundResults) {
         randomWord = Int.random(in: 0...words.count-1)
         currentExamWord = words[randomWord]
 //        reset()
-        recordScore()
+        recordScore(result)
         options = generateOptions()
         earnablePoints = calcEarnablePoints()
+        roundResult = .neutral
+        helpCount = 0
     }
     
     
@@ -85,8 +92,12 @@ import SwiftUI
 //        selectionsEnabled = true
 //    }
     
-    func recordScore() {
-        
+    func recordScore(_ result: roundResults) {
+        if result == .won {
+            //
+        } else {
+//            let score = currentExamWord.level + (helpCount * 3) * -1
+        }
     }
     
 }

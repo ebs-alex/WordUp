@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = ViewModel()
+    @StateObject private var examModel = ExamModel()
+    @StateObject private var gameDataModel = GameDataModel()
     
     let words: [Word] = Bundle.main.decode("words.json")
     @State var randomWord = 0
@@ -44,7 +45,7 @@ struct ContentView: View {
                     NavigationLink {
                         DictionaryView()
                     } label: {
-                        Text("Open Dictionary")
+                        Text("Dictionary")
                             .textAsButton()
                     }
                     Spacer()
@@ -71,7 +72,8 @@ struct ContentView: View {
             }
             
         }
-        .environmentObject(viewModel)
+        .environmentObject(examModel)
+        .environmentObject(gameDataModel)
     }
 }
 

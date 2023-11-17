@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ExamView: View {
-    @EnvironmentObject var vm: ViewModel;
+    @EnvironmentObject var em: ExamModel;
+    @EnvironmentObject var gm: GameDataModel;
     
     private let twoGrid: [GridItem] = [
         .init(.flexible(), spacing: 2),
@@ -36,7 +37,7 @@ struct ExamView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(vm.currentExamWord.name)
+                Text(em.currentExamWord.name)
                     .font(.custom(
                                 "AmericanTypewriter",
                                 size: 35,
@@ -47,14 +48,14 @@ struct ExamView: View {
                 VStack {
                     Text("Points won today")
                         .font(.footnote)
-                    Text("0000")
+                    Text("\(gm.totalPoints)")
                         .font(.headline)
                 }
                 .foregroundStyle(.green)
             }
             HStack {
                 Spacer()
-                Text("Level \(vm.currentExamWord.level)")
+                Text("Level \(em.currentExamWord.level)")
                     .font(.title2)
                     .padding(.horizontal)
                     .italic()
@@ -63,14 +64,15 @@ struct ExamView: View {
             }
             
             LazyVGrid(columns: twoGrid, spacing: 10) {
-                ForEach(vm.options, id: \.self) { option in
+                ForEach(em.options, id: \.self) { option in
                     Button {
                         selectionMade(option)
+                        recordScore(result: em.roundResult, word: em.currentExamWord, helpCount: em.helpCount, points: em.earnablePoints, gm: gm)
                     } label: {
                         Text(option)
                             .font(.subheadline)
                             .foregroundStyle(selectionsEnabled != false ? .white 
-                                : option == vm.currentExamWord.answer ? .green
+                                : option == em.currentExamWord.answer ? .green
                                         : .red)
                             .optionStyle()
                     }
@@ -81,16 +83,16 @@ struct ExamView: View {
             
             HStack {
                 if showingEarnable {
-                    Text("Earnable Points:   \(vm.earnablePoints)")
+                    Text("Earnable Points:   \(em.earnablePoints)")
                         .padding()
                         .font(.title3)
                         .bold()
                 } else {
-                    Text(resultMessage == "CORRECT!" ? "Points Won:   \(vm.earnablePoints)" : "Points Won:   -\(vm.earnablePoints)" )
+                    Text(em.roundResult == .won ? "Points Won:   \(em.earnablePoints)" : "Points Won:   \((em.currentExamWord.level * 3 + (em.helpCount * 3)) * -1) " )
                         .padding([.horizontal, .top])
                         .font(.title3)
                         .bold()
-                        .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
+                        .foregroundStyle(em.roundResult == .won ? .green : .red)
                 }
                 Spacer()
             }
@@ -98,25 +100,25 @@ struct ExamView: View {
             Text(resultMessage)
                 .padding(.bottom,5)
                 .font(.title)
-                .foregroundStyle(resultMessage == "CORRECT!" ? .green : .red)
+                .foregroundStyle(em.roundResult == .won ? .green : .red)
             
             ScrollView {
                 VStack {
                     HStack {
-                        Text("\"\(vm.currentExamWord.phonetics)\"")
+                        Text("\"\(em.currentExamWord.phonetics)\"")
                             .font(.headline)
                             .padding(.horizontal)
                         Spacer()
                     }
                     HStack {
-                        Text(vm.currentExamWord.partOfSpeech)
+                        Text(em.currentExamWord.partOfSpeech)
                             .font(.title3)
                             .padding(.horizontal)
                             .bold()
                         Spacer()
                     }
                     VStack {
-                        Text("\(vm.currentExamWord.fullDefinition)")
+                        Text("\(em.currentExamWord.fullDefinition)")
 //                            .bold()
                             .font(.title2)
                             .padding(.horizontal)
@@ -129,7 +131,7 @@ struct ExamView: View {
                             )
                             .opacity(definitionShowing ? 1.0 : 0.0 )
                         Spacer()
-                        Text("\"\(vm.currentExamWord.useSentence)\"")
+                        Text("\"\(em.currentExamWord.useSentence)\"")
                             .opacity(useSentenceShowing ? 1.0 : 0.0 )
                             .font(.headline)
                             .padding(.vertical)
@@ -141,7 +143,7 @@ struct ExamView: View {
                         Text("Synonyms")
                             .underline()
                         LazyVGrid(columns: twoGrid, spacing: 5) {
-                            ForEach(vm.currentExamWord.synonyms, id: \.self) { syn in
+                            ForEach(em.currentExamWord.synonyms, id: \.self) { syn in
                                 Text(syn)
                             }
                         }
@@ -157,7 +159,8 @@ struct ExamView: View {
                     Button("Use in Sentence") {
                         withAnimation {
                             useSentenceShowing = true
-                            vm.earnablePoints -= vm.currentExamWord.level
+                            em.earnablePoints -= em.currentExamWord.level
+                            em.helpCount += 1
                             stage = 1
                         }
                     }
@@ -167,7 +170,8 @@ struct ExamView: View {
                     Button("Show Synonyms") {
                         withAnimation {
                             synonymsShowing = true
-                            vm.earnablePoints -= vm.currentExamWord.level
+                            em.earnablePoints -= em.currentExamWord.level
+                            em.helpCount += 1
                             stage = 2
                         }
                     }
@@ -180,7 +184,7 @@ struct ExamView: View {
                 
                 if stage == 3 {
                     Button ("Next Word") {
-                        vm.nextWord()
+                        em.nextWord(em.roundResult)
                         resetExamView()
                     }
                 }
@@ -202,10 +206,12 @@ struct ExamView: View {
         
         selectionsEnabled = false
         
-        if selection == vm.currentExamWord.answer {
+        if selection == em.currentExamWord.answer {
             resultMessage = "CORRECT!"
+            em.roundResult = .won
         } else {
             resultMessage = "wrong..."
+            em.roundResult = .lost
         }
 
     }
@@ -223,7 +229,18 @@ struct ExamView: View {
 
 }
 
+@MainActor func recordScore(result: ExamModel.roundResults, word: Word, helpCount: Int, points: Int, gm: GameDataModel) {
+    if result == .won {
+        let score = points
+        gm.totalPoints += score
+    } else {
+        let score = (word.level * 3 + (helpCount * 3)) * -1
+        gm.totalPoints += score
+    }
+}
+
 #Preview {
     ExamView()
-        .environmentObject(ViewModel())
+        .environmentObject(ExamModel())
+        .environmentObject(GameDataModel())
 }

@@ -1,520 +1,607 @@
 [
-{
-    "id":"abate",
-    "name":"Abate",
-    "answer":"to lessen.",
-    "fullDefinition":"To become less intense or widespread (Typically of something perceived as hostile, threatening, or negative).",
-    "partOfSpeech":"Verb",
-    "useSentence":"The rain finally began to abate, and we saw a glimpse of sunlight.",
-    "phonetics":"uh-BATE",
-    "level":3,
-    "synonyms": [
-        "decline",
-        "reduce",
-        "taper",
-        "diminish"
-    ],
-    "similarAnswers": [
-        "testing123",
-        "123testing"
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"ambivalence",
-    "name":"Ambivalence",
-    "fullDefinition":"The state of having mixed feelings or contradictory ideas about something or someone.",
-    "answer":"Unsure or hesitant",
-    "partOfSpeech":"Noun",
-    "useSentence":"His ambivalence made it difficult to choose between the two desserts on the menu.",
-    "phonetics":"am-Bih-vUh-lenS",
-    "level":3,
-    "synonyms": [
-        "Uncertainty",
-        "Confusion",
-        "Vacillation"
-    ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"analogous",
-    "name":"Analogous",
-    "fullDefinition":"Similar in a way that invites comparison : showing an analogy or a likeness that permits one to draw an analogy.",
-    "answer":"Similar but not identical.",
-    "partOfSpeech":"Adjective",
-    "useSentence":"The fall of Rome is analgous to our present situation!",
-    "phonetics":"ah-na-Luh-gues",
-    "level":3,
-    "synonyms": [
-        "Similar",
-        "Alike",
-        "Comparable",
-        "Parallel"
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"bereft",
-    "name":"Bereft",
-    "fullDefinition":"lacking something needed, wanted, or expected",
-    "answer":"deprived of, lacking",
-    "partOfSpeech":"Adjective",
-    "useSentence":"Her room was stark and bereft of color.",
-    "phonetics":"bih-refT",
-    "level":4,
-    "synonyms": [
-        "wanting",
-        "devoid",
-        "without",
-        "lacking"
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"cognizant",
-    "name":"Cognizant",
-    "fullDefinition":"having knowledge or being aware of.",
-    "answer":"aware of",
-    "partOfSpeech":"Adjective",
-    "useSentence":"Statesmen must be cognizant of the political boundaries within which they work.",
-    "phonetics":"Kawg-nih-zint",
-    "level":3,
-    "synonyms": [
-        "abreast",
-        "apprised",
-        "conscious",
-   ],
-    "similarAnswers": [
-        "Perceptiveness",
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"disrepute",
-    "name":"Disrepute",
-    "fullDefinition":"state of low public esteem",
-    "answer":"public disgrace",
-    "partOfSpeech":"Noun",
-    "useSentence":"Behaviour like this brings the entire industry into disrepute.",
-    "phonetics":"dis-rih-pyoot",
-    "level":3,
-    "synonyms": [
-        "disgrace",
-        "shame",
-        "infamy",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"acumen",
-    "name":"Acumen",
-    "fullDefinition":"The ability to make good judgments and quick decisions, typically in a particular domain",
-    "answer":"Skill & wit",
-    "partOfSpeech":"Noun",
-    "useSentence":"He will need all his political acumen in these negotiations",
-    "phonetics":"ah-kyuh-men",
-    "level":3,
-    "synonyms": [
-        "Astuteness",
-        "Sharp",
-        "Cleverness",
-        "Savvy",
-   ],
-    "similarAnswers": [
-        "Perceptiveness",
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"impinge",
-    "name":"Impinge",
-    "fullDefinition":"have an effect or impact, especially a negative one",
-    "answer":"disturb",
-    "partOfSpeech":"Verb",
-    "useSentence":"Mobile technology makes it easier for work to impinge on family life",
-    "phonetics":"ihm-pinj",
-    "level":3,
-    "synonyms": [
-        "Encroach",
-        "Infringe",
-        "Meddle",
-        "Affect",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"pejorative",
-    "name":"Pejorative",
-    "fullDefinition":"having negative connotations",
-    "answer":"Derisive",
-    "partOfSpeech":"Adjective",
-    "useSentence":"Most of what he said was inflammatory and filled with pejoratives.",
-    "phonetics":"puh-jo-ruh-tuhv",
-    "level":3,
-    "synonyms": [
-        "Derogatory",
-        "Insulting",
-        "Disparaging",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"phlegmatic",
-    "name":"Phlegmatic",
-    "fullDefinition":"Self-controlled; calm and stoic.",
-    "answer":"Stoic",
-    "partOfSpeech":"Adjective",
-    "useSentence":"Even the normally phlegmatic Commander was grinning like a maniac..",
-    "phonetics":"fleg-ma-dik",
-    "level":4,
-    "synonyms": [
-        "Calm",
-        "Composed",
-        "Controlled",
-        "Poised",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"predilection",
-    "name":"Predilection",
-    "fullDefinition":"A predisposition in favor of something",
-    "answer":"Bias",
-    "partOfSpeech":"Noun",
-    "useSentence":"She has a predilection for Asian food.",
-    "phonetics":"pree-dih-lik-shin",
-    "level":4,
-    "synonyms": [
-        "Preference",
-        "Penchant",
-        "Inclination",
-        "Fancy",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"terse",
-    "name":"Terse",
-    "fullDefinition":"sparing in the use of words; abrupt.",
-    "answer":"Brief",
-    "partOfSpeech":"Adjective",
-    "useSentence":"'No.' was his terse response",
-    "phonetics":"turss",
-    "level":3,
-    "synonyms": [
-        "Abrupt",
-        "Curt",
-        "Concise",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"fortuitous",
-    "name":"Fortuitous",
-    "fullDefinition":"happening by a lucky chance; fortunate.",
-    "answer":"Lucky",
-    "partOfSpeech":"Adjective",
-    "useSentence":"This would have been impossible but for one fortuitous circumstance.",
-    "phonetics":"turss",
-    "level":3,
-    "synonyms": [
-        "Fortunate",
-        "Serendipitous",
-        "Fluke",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"loquacity",
-    "name":"Loquacity",
-    "fullDefinition":"talkativeness, esp. when excessive.",
-    "answer":"Talkative",
-    "partOfSpeech":"Noun",
-    "useSentence":"Steve, who knew his son's tendency toward unnecessary loquacity as well as I did, replied for him.",
-    "phonetics":"low-kwa-suh-tee",
-    "level":4,
-    "synonyms": [
-        "Verbosity",
-        "Chattiness",
-        "garrulity",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"panoply",
-    "name":"Panoply",
-    "fullDefinition":"An exravagant display or impressive collection of things.",
-    "answer":"Exhibition",
-    "partOfSpeech":"Noun",
-    "useSentence":"All the panoply of Western religious liturgy",
-    "phonetics":"pan-uh-plee",
-    "level":4,
-    "synonyms": [
-        "Collection",
-        "Regalia",
-        "Array",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"perspicacity",
-    "name":"Perspicacity",
-    "fullDefinition":"Keenness of mental perception and understanding.",
-    "answer":"Perceptiveness",
-    "partOfSpeech":"Noun",
-    "useSentence":"Drinking heavily had distracted his watchfulness and obscured his perspicacity.",
-    "phonetics":"pur-spuh-ka-suh-tee",
-    "level":4,
-    "synonyms": [
-        "Astuteness",
-        "Acuity",
-        "Discernment",
-   ],
-    "similarAnswers": [
-        "Skill & wit",
-        "aware of",
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"praxis",
-    "name":"Praxis",
-    "fullDefinition":"Accepted practice or custom.",
-    "answer":"traditional action",
-    "partOfSpeech":"Noun",
-    "useSentence":"She is interested in both the theory and praxis of criminology.",
-    "phonetics":"prak-suhs",
-    "level":4,
-    "synonyms": [
-        "Practice",
-        "Custom",
-        "Implementation",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"indefatigable",
-    "name":"Indefatigable",
-    "fullDefinition":"Incapable of being tired out; not yielding to fatigue.",
-    "answer":"tireless",
-    "partOfSpeech":"Adjective",
-    "useSentence":"An indefatigable defender of human rights.",
-    "phonetics":"in-duh-fa-tuh-guh-bl",
-    "level":3,
-    "synonyms": [
-        "Unwavering",
-        "Indomitable",
-        "Unrelenting",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"chagrin",
-    "name":"Chagrin",
-    "fullDefinition":"disquietude or distress caused by humiliation, disappointment, or failure.",
-    "answer":"displeasure",
-    "partOfSpeech":"Noun",
-    "useSentence":"An indefatigable defender of human rights.",
-    "phonetics":"sha-grin",
-    "level":4,
-    "synonyms": [
-        "Vexation",
-        "Distress",
-        "Frustration",
-        "Annoyance",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"bovine",
-    "name":"Bovine",
-    "fullDefinition":"Having to do with cows or cattle. as pejorative; dull, dim-witted",
-    "answer":"Cow-like",
-    "partOfSpeech":"Adjective",
-    "useSentence":"He had a gentle, slightly bovine expression.",
-    "phonetics":"bow-vine",
-    "level":4,
-    "synonyms": [
-        "Dim-witted",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"simian",
-    "name":"Simian",
-    "fullDefinition":"Relating to, resembling, or affecting apes or monkeys.",
-    "answer":"Monkey",
-    "partOfSpeech":"Noun",
-    "useSentence":"A polymerase chain reaction analysis for simian virus 40 DNA was negative.",
-    "phonetics":"sih-mee-uhn",
-    "level":4,
-    "synonyms": [
-        "anthropoid",
-   ],
-    "similarAnswers": [
-
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"sycophant",
-    "name":"Sycophant",
-    "fullDefinition":"A servile self-seeking flatterer.",
-    "answer":"suck-up",
-    "partOfSpeech":"Noun",
-    "useSentence":"His high-rank attracts all sorts of sycophants",
-    "phonetics":"sih-kah-fnt",
-    "level":4,
-    "synonyms": [
-        "Groupy",
-        "Fawner",
-        "Groveler",
-        "Brown-nose"
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"superfluous",
-    "name":"Superfluous",
-    "fullDefinition":"Unnecessary, especially through being more than enough.",
-    "answer":"Redundant",
-    "partOfSpeech":"Adjective",
-    "useSentence":"Delete the superfluous details.",
-    "phonetics":"soo-per-floo-uhs",
-    "level":3,
-    "synonyms": [
-        "Extra",
-        "Needless",
-        "Expendable",
-        "Excessive",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-{
-    "id":"irascible",
-    "name":"Irascible",
-    "fullDefinition":"Having or showing a tendency to be easily angered.",
-    "answer":"Irritable",
-    "partOfSpeech":"Adjective",
-    "useSentence":"That house belongs to an irascible crank who never has a kind word for any neighbor.",
-    "phonetics":"ih-ra-suh-bul",
-    "level":3,
-    "synonyms": [
-        "Crabby",
-        "Snappy",
-        "Grouchy",
-        "Cranky",
-   ],
-    "similarAnswers": [
-        
-    ],
-    "metaTags": [
-        
-    ],
-},
-
-
+    {
+        "id":"abate",
+        "name":"Abate",
+        "answer":"to lessen.",
+        "fullDefinition":"To become less intense or widespread (Typically of something perceived as hostile, threatening, or negative).",
+        "partOfSpeech":"Verb",
+        "useSentence":"The rain finally began to abate, and we saw a glimpse of sunlight.",
+        "phonetics":"uh-BATE",
+        "level":3,
+        "synonyms": [
+            "decline",
+            "reduce",
+            "taper",
+            "diminish"
+        ],
+        "similarAnswers": [
+            "testing123",
+            "123testing"
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"ambivalence",
+        "name":"Ambivalence",
+        "fullDefinition":"The state of having mixed feelings or contradictory ideas about something or someone.",
+        "answer":"Unsure or hesitant",
+        "partOfSpeech":"Noun",
+        "useSentence":"His ambivalence made it difficult to choose between the two desserts on the menu.",
+        "phonetics":"am-Bih-vUh-lenS",
+        "level":3,
+        "synonyms": [
+            "Uncertainty",
+            "Confusion",
+            "Vacillation"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"analogous",
+        "name":"Analogous",
+        "fullDefinition":"Similar in a way that invites comparison : showing an analogy or a likeness that permits one to draw an analogy.",
+        "answer":"Similar but not identical.",
+        "partOfSpeech":"Adjective",
+        "useSentence":"The fall of Rome is analgous to our present situation!",
+        "phonetics":"ah-na-Luh-gues",
+        "level":3,
+        "synonyms": [
+            "Similar",
+            "Alike",
+            "Comparable",
+            "Parallel"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"bereft",
+        "name":"Bereft",
+        "fullDefinition":"lacking something needed, wanted, or expected",
+        "answer":"deprived of, lacking",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Her room was stark and bereft of color.",
+        "phonetics":"bih-refT",
+        "level":4,
+        "synonyms": [
+            "wanting",
+            "devoid",
+            "without",
+            "lacking"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"cognizant",
+        "name":"Cognizant",
+        "fullDefinition":"having knowledge or being aware of.",
+        "answer":"aware of",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Statesmen must be cognizant of the political boundaries within which they work.",
+        "phonetics":"Kawg-nih-zint",
+        "level":3,
+        "synonyms": [
+            "abreast",
+            "apprised",
+            "conscious",
+        ],
+        "similarAnswers": [
+            "Perceptiveness",
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"disrepute",
+        "name":"Disrepute",
+        "fullDefinition":"state of low public esteem",
+        "answer":"public disgrace",
+        "partOfSpeech":"Noun",
+        "useSentence":"Behaviour like this brings the entire industry into disrepute.",
+        "phonetics":"dis-rih-pyoot",
+        "level":3,
+        "synonyms": [
+            "disgrace",
+            "shame",
+            "infamy",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"acumen",
+        "name":"Acumen",
+        "fullDefinition":"The ability to make good judgments and quick decisions, typically in a particular domain",
+        "answer":"Skill & wit",
+        "partOfSpeech":"Noun",
+        "useSentence":"He will need all his political acumen in these negotiations",
+        "phonetics":"ah-kyuh-men",
+        "level":3,
+        "synonyms": [
+            "Astuteness",
+            "Sharp",
+            "Cleverness",
+            "Savvy",
+        ],
+        "similarAnswers": [
+            "Perceptiveness",
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"impinge",
+        "name":"Impinge",
+        "fullDefinition":"have an effect or impact, especially a negative one",
+        "answer":"disturb",
+        "partOfSpeech":"Verb",
+        "useSentence":"Mobile technology makes it easier for work to impinge on family life",
+        "phonetics":"ihm-pinj",
+        "level":3,
+        "synonyms": [
+            "Encroach",
+            "Infringe",
+            "Meddle",
+            "Affect",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"pejorative",
+        "name":"Pejorative",
+        "fullDefinition":"having negative connotations",
+        "answer":"Derisive",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Most of what he said was inflammatory and filled with pejoratives.",
+        "phonetics":"puh-jo-ruh-tuhv",
+        "level":3,
+        "synonyms": [
+            "Derogatory",
+            "Insulting",
+            "Disparaging",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"phlegmatic",
+        "name":"Phlegmatic",
+        "fullDefinition":"Self-controlled; calm and stoic.",
+        "answer":"Stoic",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Even the normally phlegmatic Commander was grinning like a maniac..",
+        "phonetics":"fleg-ma-dik",
+        "level":4,
+        "synonyms": [
+            "Calm",
+            "Composed",
+            "Controlled",
+            "Poised",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"predilection",
+        "name":"Predilection",
+        "fullDefinition":"A predisposition in favor of something",
+        "answer":"Bias",
+        "partOfSpeech":"Noun",
+        "useSentence":"She has a predilection for Asian food.",
+        "phonetics":"pree-dih-lik-shin",
+        "level":4,
+        "synonyms": [
+            "Preference",
+            "Penchant",
+            "Inclination",
+            "Fancy",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"terse",
+        "name":"Terse",
+        "fullDefinition":"sparing in the use of words; abrupt.",
+        "answer":"Brief",
+        "partOfSpeech":"Adjective",
+        "useSentence":"'No.' was his terse response",
+        "phonetics":"turss",
+        "level":3,
+        "synonyms": [
+            "Abrupt",
+            "Curt",
+            "Concise",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"fortuitous",
+        "name":"Fortuitous",
+        "fullDefinition":"happening by a lucky chance; fortunate.",
+        "answer":"Lucky",
+        "partOfSpeech":"Adjective",
+        "useSentence":"This would have been impossible but for one fortuitous circumstance.",
+        "phonetics":"turss",
+        "level":3,
+        "synonyms": [
+            "Fortunate",
+            "Serendipitous",
+            "Fluke",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"loquacious",
+        "name":"Loquacious",
+        "fullDefinition":"tending to talk a great deal; talkative.",
+        "answer":"Verbose",
+        "partOfSpeech":"Noun",
+        "useSentence":"Steve, who knew his son's tendency toward unnecessary loquacity as well as I did, replied for him.",
+        "phonetics":"low-kwa-suh-tee",
+        "level":4,
+        "synonyms": [
+            "Talkative",
+            "Chatty",
+            "Garrulous",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"panoply",
+        "name":"Panoply",
+        "fullDefinition":"An exravagant display or impressive collection of things.",
+        "answer":"Exhibition",
+        "partOfSpeech":"Noun",
+        "useSentence":"All the panoply of Western religious liturgy",
+        "phonetics":"pan-uh-plee",
+        "level":4,
+        "synonyms": [
+            "Collection",
+            "Regalia",
+            "Array",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"perspicacity",
+        "name":"Perspicacity",
+        "fullDefinition":"Keenness of mental perception and understanding.",
+        "answer":"Perceptiveness",
+        "partOfSpeech":"Noun",
+        "useSentence":"Drinking heavily had distracted his watchfulness and obscured his perspicacity.",
+        "phonetics":"pur-spuh-ka-suh-tee",
+        "level":4,
+        "synonyms": [
+            "Astuteness",
+            "Acuity",
+            "Discernment",
+        ],
+        "similarAnswers": [
+            "Skill & wit",
+            "aware of",
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"praxis",
+        "name":"Praxis",
+        "fullDefinition":"Accepted practice or custom.",
+        "answer":"traditional action",
+        "partOfSpeech":"Noun",
+        "useSentence":"She is interested in both the theory and praxis of criminology.",
+        "phonetics":"prak-suhs",
+        "level":4,
+        "synonyms": [
+            "Practice",
+            "Custom",
+            "Implementation",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"indefatigable",
+        "name":"Indefatigable",
+        "fullDefinition":"Incapable of being tired out; not yielding to fatigue.",
+        "answer":"tireless",
+        "partOfSpeech":"Adjective",
+        "useSentence":"An indefatigable defender of human rights.",
+        "phonetics":"in-duh-fa-tuh-guh-bl",
+        "level":3,
+        "synonyms": [
+            "Unwavering",
+            "Indomitable",
+            "Unrelenting",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"chagrin",
+        "name":"Chagrin",
+        "fullDefinition":"disquietude or distress caused by humiliation, disappointment, or failure.",
+        "answer":"displeasure",
+        "partOfSpeech":"Noun",
+        "useSentence":"An indefatigable defender of human rights.",
+        "phonetics":"sha-grin",
+        "level":4,
+        "synonyms": [
+            "Vexation",
+            "Distress",
+            "Frustration",
+            "Annoyance",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"bovine",
+        "name":"Bovine",
+        "fullDefinition":"Having to do with cows or cattle. as pejorative; dull, dim-witted",
+        "answer":"Cow-like",
+        "partOfSpeech":"Adjective",
+        "useSentence":"He had a gentle, slightly bovine expression.",
+        "phonetics":"bow-vine",
+        "level":4,
+        "synonyms": [
+            "Dim-witted",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"simian",
+        "name":"Simian",
+        "fullDefinition":"Relating to, resembling, or affecting apes or monkeys.",
+        "answer":"Monkey",
+        "partOfSpeech":"Noun",
+        "useSentence":"A polymerase chain reaction analysis for simian virus 40 DNA was negative.",
+        "phonetics":"sih-mee-uhn",
+        "level":4,
+        "synonyms": [
+            "anthropoid",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"sycophant",
+        "name":"Sycophant",
+        "fullDefinition":"A servile self-seeking flatterer.",
+        "answer":"suck-up",
+        "partOfSpeech":"Noun",
+        "useSentence":"His high-rank attracts all sorts of sycophants",
+        "phonetics":"sih-kah-fnt",
+        "level":4,
+        "synonyms": [
+            "Groupy",
+            "Fawner",
+            "Groveler",
+            "Brown-nose"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"superfluous",
+        "name":"Superfluous",
+        "fullDefinition":"Unnecessary, especially through being more than enough.",
+        "answer":"Redundant",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Delete the superfluous details.",
+        "phonetics":"soo-per-floo-uhs",
+        "level":3,
+        "synonyms": [
+            "Extra",
+            "Needless",
+            "Expendable",
+            "Excessive",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"irascible",
+        "name":"Irascible",
+        "fullDefinition":"Having or showing a tendency to be easily angered.",
+        "answer":"Irritable",
+        "partOfSpeech":"Adjective",
+        "useSentence":"That house belongs to an irascible crank who never has a kind word for any neighbor.",
+        "phonetics":"ih-ra-suh-bul",
+        "level":3,
+        "synonyms": [
+            "Crabby",
+            "Snappy",
+            "Grouchy",
+            "Cranky",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"cadre",
+        "name":"Cadre",
+        "fullDefinition":"A group of trained or otherwise qualified personnel.",
+        "answer":"Team",
+        "partOfSpeech":"Noun",
+        "useSentence":"The mob boss had a cadre of his best armed men at the funeral.",
+        "phonetics":"kaa-dreeh",
+        "level":3,
+        "synonyms": [
+            "Band",
+            "Core",
+            "Force",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"regale",
+        "name":"Regale",
+        "fullDefinition":"To lavishly entertain or amuse.",
+        "answer":"Entertain",
+        "partOfSpeech":"Verb",
+        "useSentence":"She regaled him with an impressive home-cooked feast.",
+        "phonetics":"rih-gayl",
+        "level":4,
+        "synonyms": [
+            "Captivate",
+            "Amuse",
+            "Delight",
+            "Fascinate",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"inculcate",
+        "name":"Inculcate",
+        "fullDefinition":"To frequently instill an idea or belief firmly in someone's mind.",
+        "answer":"Instill",
+        "partOfSpeech":"Verb",
+        "useSentence":"Do you feel our professors should inculcate us with their political views?",
+        "phonetics":"in-kul-kayt",
+        "level":4,
+        "synonyms": [
+            "Infuse",
+            "Implant",
+            "Imprint",
+            "Foster",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"portentous",
+        "name":"Portentous",
+        "fullDefinition":"Ominously significant or indicative.",
+        "answer":"Fateful",
+        "partOfSpeech":"Adjective",
+        "useSentence":"The scene was grim and portentous, and a sense of foreboding loomed.",
+        "phonetics":"por-ten-tuhs",
+        "level":4,
+        "synonyms": [
+            "Ominous",
+            "Momentous",
+            "Menacing",
+            "Warning",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    
+    
 ]
