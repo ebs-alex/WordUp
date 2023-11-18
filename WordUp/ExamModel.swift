@@ -71,34 +71,15 @@ import SwiftUI
     }
     
 
-    func nextWord(_ result: roundResults) {
+    func nextWord() {
         randomWord = Int.random(in: 0...words.count-1)
         currentExamWord = words[randomWord]
-//        reset()
-        recordScore(result)
         options = generateOptions()
         earnablePoints = calcEarnablePoints()
         roundResult = .neutral
         helpCount = 0
     }
-    
-    
-//    func reset() {
-//        useSentenceShowing = false
-//        synonymsShowing = false
-//        definitionShowing = false
-//        stage = 0
-//        resultMessage = ""
-//        selectionsEnabled = true
-//    }
-    
-    func recordScore(_ result: roundResults) {
-        if result == .won {
-            //
-        } else {
-//            let score = currentExamWord.level + (helpCount * 3) * -1
-        }
-    }
+
     
 }
 
@@ -120,6 +101,7 @@ struct TitleModifier: ViewModifier {
         content
             .font(.title2)
             .padding(20)
+            .frame(width: 200, height: 80)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(.blue, lineWidth: 2)

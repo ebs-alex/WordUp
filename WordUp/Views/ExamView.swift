@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExamView: View {
     @EnvironmentObject var em: ExamModel;
-    @EnvironmentObject var gm: GameDataModel;
+    @EnvironmentObject var dm: DataModel;
     
     private let twoGrid: [GridItem] = [
         .init(.flexible(), spacing: 2),
@@ -48,7 +48,7 @@ struct ExamView: View {
                 VStack {
                     Text("Points won today")
                         .font(.footnote)
-                    Text("\(gm.totalPoints)")
+                    Text("\(dm.totalPoints)")
                         .font(.headline)
                 }
                 .foregroundStyle(.green)
@@ -67,7 +67,7 @@ struct ExamView: View {
                 ForEach(em.options, id: \.self) { option in
                     Button {
                         selectionMade(option)
-                        recordScore(result: em.roundResult, word: em.currentExamWord, helpCount: em.helpCount, points: em.earnablePoints, gm: gm)
+                        recordScore(result: em.roundResult, word: em.currentExamWord, helpCount: em.helpCount, points: em.earnablePoints, dm: dm)
                     } label: {
                         Text(option)
                             .font(.subheadline)
@@ -184,7 +184,7 @@ struct ExamView: View {
                 
                 if stage == 3 {
                     Button ("Next Word") {
-                        em.nextWord(em.roundResult)
+                        em.nextWord()
                         resetExamView()
                     }
                 }
@@ -195,7 +195,7 @@ struct ExamView: View {
 
     }
     
-    func selectionMade(_ selection: String) {
+@MainActor func selectionMade(_ selection: String) {
         withAnimation {
             definitionShowing = true
             synonymsShowing = true
@@ -213,6 +213,7 @@ struct ExamView: View {
             resultMessage = "wrong..."
             em.roundResult = .lost
         }
+        dm.wordCount += 1
 
     }
     
@@ -229,18 +230,19 @@ struct ExamView: View {
 
 }
 
-@MainActor func recordScore(result: ExamModel.roundResults, word: Word, helpCount: Int, points: Int, gm: GameDataModel) {
+@MainActor func recordScore(result: ExamModel.roundResults, word: Word, helpCount: Int, points: Int, dm: DataModel) {
     if result == .won {
         let score = points
-        gm.totalPoints += score
+        dm.totalPoints += score
     } else {
         let score = (word.level * 3 + (helpCount * 3)) * -1
-        gm.totalPoints += score
+        dm.totalPoints += score
     }
+    
 }
 
 #Preview {
     ExamView()
         .environmentObject(ExamModel())
-        .environmentObject(GameDataModel())
+        .environmentObject(DataModel())
 }

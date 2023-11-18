@@ -602,6 +602,46 @@
             
         ],
     },
+    {
+        "id":"demarcate",
+        "name":"Demarcate",
+        "fullDefinition":"To set the boundaries or limits of.",
+        "answer":"Delineate",
+        "partOfSpeech":"Verb",
+        "useSentence":"plots of land demarcated by barbed wire",
+        "phonetics":"dee-maar-kayt",
+        "level":3,
+        "synonyms": [
+            "Delimit",
+            "Define",
+            "Mark",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"quorum",
+        "name":"Quorum",
+        "fullDefinition":"The minimum number of people who must be present for a meeting to begin.",
+        "answer":"Minimum Attendance",
+        "partOfSpeech":"Nount",
+        "useSentence":"We must have a quorum to make that decision.",
+        "phonetics":"kwo-ruhm",
+        "level":4,
+        "synonyms": [
+            "~No Synonyms~"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
     
     
 ]

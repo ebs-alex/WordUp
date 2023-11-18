@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor class GameDataModel: ObservableObject {
+@MainActor class DataModel: ObservableObject {
     
-    var totalPoints: Int = 0
-
-    
+    @Published var totalPoints: Int = 0
+    @Published var wordCount: Int = 0
     
 }

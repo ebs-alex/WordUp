@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var examModel = ExamModel()
-    @StateObject private var gameDataModel = GameDataModel()
+    @StateObject private var em = ExamModel()
+    @StateObject private var dm = DataModel()
     
     let words: [Word] = Bundle.main.decode("words.json")
     @State var randomWord = 0
@@ -22,6 +22,7 @@ struct ContentView: View {
                 VStack {
                     Text("Brute Words")
                         .padding(.top, 5)
+                        .underline()
                         .font(.custom(
                                 "AmericanTypewriter",
                                 fixedSize: 45))
@@ -33,14 +34,14 @@ struct ContentView: View {
                             .font(.title)
                             .textAsButton()
                     }
-                    Spacer()
-                    NavigationLink {
-                        WordView(word: words[randomWord])
-                            .navigationTitle("Random Word")
-                    } label: {
-                        Text("Random Word")
-                            .textAsButton()
-                    }
+//                    Spacer()
+//                    NavigationLink {
+//                        WordView(word: words[randomWord])
+//                            .navigationTitle("Random Word")
+//                    } label: {
+//                        Text("Random Word")
+//                            .textAsButton()
+//                    }
                     Spacer()
                     NavigationLink {
                         DictionaryView()
@@ -63,6 +64,22 @@ struct ContentView: View {
                             .textAsButton()
                     }
                     Spacer()
+                    HStack {
+                        VStack {
+                            Text("Words done today")
+                                .font(.footnote)
+                            Text("\(dm.wordCount)")
+                                .font(.footnote)
+                        }
+                        Spacer()
+                        VStack {
+                            Text("Points Earned Today")
+                                .font(.footnote)
+                            Text("\(dm.totalPoints)")
+                                .font(.footnote)
+                        }
+                    }
+                    .padding(.horizontal)
                 }
                 .foregroundStyle(.white)
                 .padding()
@@ -72,8 +89,8 @@ struct ContentView: View {
             }
             
         }
-        .environmentObject(examModel)
-        .environmentObject(gameDataModel)
+        .environmentObject(em)
+        .environmentObject(dm)
     }
 }
 
