@@ -642,6 +642,26 @@
             
         ],
     },
-    
-    
+    {
+        "id":"indelible",
+        "name":"Indelible",
+        "fullDefinition":"that cannot be removed, washed away, or erased.",
+        "answer":"Permanent",
+        "partOfSpeech":"Adjective",
+        "useSentence":"This whole ordeal left an indelible imprint on his soul.",
+        "phonetics":"in-deh-li-bul",
+        "level":3,
+        "synonyms": [
+            "Lasting",
+            "Unforgettable",
+            "Imperishable",
+            "Enduring",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]

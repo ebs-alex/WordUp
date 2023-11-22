@@ -88,8 +88,8 @@
 			children = (
 				FAD7681E2AEF03F300BB353E /* ToDo.md */,
 				FAEDE20C2AE9D24700A51519 /* WordUpApp.swift */,
-				FAEDE2222AE9DC8800A51519 /* ExamModel.swift */,
 				FAAF8F6E2B074087002518A6 /* DataModel.swift */,
+				FAEDE2222AE9DC8800A51519 /* ExamModel.swift */,
 				FAD486722AEE1F9D0026B99E /* Views */,
 				FAEDE21C2AE9D2FA00A51519 /* Word.swift */,
 				FAEDE21E2AE9D4FC00A51519 /* words.json */,
