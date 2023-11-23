@@ -11,5 +11,7 @@ To Do:
 - Add favorites function to random word and exam view
 
 
+- on ExamView, when we hit the "back" button we need to trigger "next word" is an option selection has already been made
+
 
 ? How will we keep similar answers from appearing for a word that can take both defintions?

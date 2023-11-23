@@ -11,8 +11,6 @@ struct ContentView: View {
     @StateObject private var em = ExamModel()
     @StateObject private var dm = DataModel()
     
-    let words: [Word] = Bundle.main.decode("words.json")
-    @State var randomWord = 0
     
     var body: some View {
         NavigationStack {
@@ -31,17 +29,9 @@ struct ContentView: View {
                         ExamView()
                     } label: {
                         Text("Get to Work")
-                            .font(.title)
+                            .bold()
                             .textAsButton()
                     }
-//                    Spacer()
-//                    NavigationLink {
-//                        WordView(word: words[randomWord])
-//                            .navigationTitle("Random Word")
-//                    } label: {
-//                        Text("Random Word")
-//                            .textAsButton()
-//                    }
                     Spacer()
                     NavigationLink {
                         DictionaryView()
@@ -83,9 +73,6 @@ struct ContentView: View {
                 }
                 .foregroundStyle(.white)
                 .padding()
-                .onAppear {
-                    randomWord = Int.random(in: 0...words.count-1)
-                }
             }
             
         }

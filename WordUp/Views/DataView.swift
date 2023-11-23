@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DataView: View {
+    @EnvironmentObject var dm: DataModel;
+    @State private var showingResetAlert = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -19,15 +22,32 @@ struct DataView: View {
                     } label: {
                         Text("Hello, Data!")
                     }
+                    Button {
+                        showingResetAlert = true
+                    } label: {
+                        Text("Reset Data")
+                    }
                 }
+//
+//                .padding(10)
+//                Spacer()
             }
             .navigationTitle("Data")
             .navigationBarTitleDisplayMode(.large)
             .preferredColorScheme(.dark)
         }
+        .alert("This will delete all your data!", isPresented: $showingResetAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("RESET", role: .destructive) { resetData() }
+        }
+    }
+    func resetData() {
+        dm.totalPoints = 0
+        dm.wordCount = 0
     }
 }
 
 #Preview {
     DataView()
+        .environmentObject(DataModel())
 }

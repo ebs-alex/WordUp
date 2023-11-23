@@ -182,7 +182,7 @@
         "answer":"Derisive",
         "partOfSpeech":"Adjective",
         "useSentence":"Most of what he said was inflammatory and filled with pejoratives.",
-        "phonetics":"puh-jo-ruh-tuhv",
+        "phonetics":"peh-jo-ruh-tuhv",
         "level":3,
         "synonyms": [
             "Derogatory",
@@ -656,6 +656,28 @@
             "Unforgettable",
             "Imperishable",
             "Enduring",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"sartorial",
+        "name":"Sartorial",
+        "fullDefinition":"relating to high-end tailoring, clothes, or style of dress.",
+        "answer":"Stylish",
+        "partOfSpeech":"Adjective",
+        "useSentence":"The wedding party arrived in sartorial splendor.",
+        "phonetics":"saar-taw-ree-uhl",
+        "level":4,
+        "synonyms": [
+            "Dapper",
+            "Fashionable",
+            "Chic",
+            "Elegant",
         ],
         "similarAnswers": [
             

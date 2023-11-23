@@ -8,26 +8,21 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     var body: some View {
         NavigationStack {
             VStack {
                 List {
-                    NavigationLink {
-                        Text("Preffered Word Levels")
-                    } label: {
-                        Text("Preffered Word Levels")
-                    }
-                    .padding(10)
+//                    NavigationLink {
+//                        Text("Preffered Word Levels")
+//                    } label: {
+//                        Text("Preffered Word Levels")
+//                    }
+//                    .padding(10)
                     NavigationLink {
                         Text("Display")
                     } label: {
                         Text("Display")
-                    }
-                    .padding(10)
-                    NavigationLink {
-                        Text("Reset Data")
-                    } label: {
-                        Text("Reset Data")
                     }
                     .padding(10)
                     NavigationLink {
@@ -52,8 +47,11 @@ struct SettingsView: View {
                 
         }
     }
+    
+
 }
 
 #Preview {
     SettingsView()
+        
 }

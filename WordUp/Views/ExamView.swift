@@ -105,24 +105,26 @@ struct ExamView: View {
             ScrollView {
                 VStack {
                     HStack {
-                        Text("\"\(em.currentExamWord.phonetics)\"")
-                            .font(.headline)
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    HStack {
-                        Text(em.currentExamWord.partOfSpeech)
+                        Text("\" \(em.currentExamWord.phonetics) \"")
                             .font(.title3)
                             .padding(.horizontal)
-                            .bold()
                         Spacer()
+                        Text(em.currentExamWord.partOfSpeech)
+                            .font(.title2)
+                            .padding(.horizontal,25)
+                            .bold()
                     }
+//                    HStack {
+//                        
+//                        Spacer()
+//                    }
                     VStack {
                         Text("\(em.currentExamWord.fullDefinition)")
 //                            .bold()
                             .font(.title2)
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
+                            .italic()
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 15)
                             .multilineTextAlignment(.center)
 //                            .border(.white)
                             .overlay(
@@ -152,28 +154,37 @@ struct ExamView: View {
                     .font(.headline)
                     Spacer()
                 }
-//                .scrollIndicators(.visible)
+
             }
-            VStack(spacing: 25) {
+            
+//            VStack(spacing: 25) {
                 if stage == 0 {
-                    Button("Use in Sentence") {
+                    Button {
                         withAnimation {
                             useSentenceShowing = true
                             em.earnablePoints -= em.currentExamWord.level
                             em.helpCount += 1
                             stage = 1
                         }
+                    } label: {
+                        Text("Use in Sentence")
+                            .font(.title2)
+                            .bold()
                     }
                 }
                 
                 if stage == 1 {
-                    Button("Show Synonyms") {
+                    Button {
                         withAnimation {
                             synonymsShowing = true
                             em.earnablePoints -= em.currentExamWord.level
                             em.helpCount += 1
                             stage = 2
                         }
+                    } label: {
+                        Text("Show Synonyms")
+                            .font(.title2)
+                            .bold()
                     }
                 }
                 
@@ -183,12 +194,23 @@ struct ExamView: View {
                 
                 
                 if stage == 3 {
-                    Button ("Next Word") {
+                    Button {
                         em.nextWord()
                         resetExamView()
+                    } label: {
+                        Text("Next Word  >>")
+                            .font(.title2)
+//                            .bold()
+                            .foregroundStyle(.yellow)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.yellow, lineWidth: 1)
+                            )
                     }
                 }
-            }
+//            }
         }
         .preferredColorScheme(.dark)
         .padding()
