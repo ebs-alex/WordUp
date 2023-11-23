@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA2FA68B2AF03B2D00A47ED7 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FA68A2AF03B2D00A47ED7 /* DataView.swift */; };
+		FA993C3E2B0FBFA800519D63 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA993C3D2B0FBFA800519D63 /* FileManager-DocumentsDirectory.swift */; };
 		FAAF8F6F2B074087002518A6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF8F6E2B074087002518A6 /* DataModel.swift */; };
 		FAD486742AEE206E0026B99E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486732AEE206E0026B99E /* SettingsView.swift */; };
 		FAD486762AEE26B90026B99E /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD486752AEE26B90026B99E /* ExamView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		FA2FA68A2AF03B2D00A47ED7 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		FA993C3D2B0FBFA800519D63 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		FAAF8F6E2B074087002518A6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FAD486732AEE206E0026B99E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FAD486752AEE26B90026B99E /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				FAEDE21C2AE9D2FA00A51519 /* Word.swift */,
 				FAEDE21E2AE9D4FC00A51519 /* words.json */,
 				FAEDE21A2AE9D28E00A51519 /* Bundle-decodable.swift */,
+				FA993C3D2B0FBFA800519D63 /* FileManager-DocumentsDirectory.swift */,
 				FAEDE2102AE9D24900A51519 /* Assets.xcassets */,
 				FAEDE2122AE9D24900A51519 /* Preview Content */,
 			);
@@ -186,6 +189,7 @@
 				FA2FA68B2AF03B2D00A47ED7 /* DataView.swift in Sources */,
 				FAEDE2252AE9DE2400A51519 /* WordView.swift in Sources */,
 				FAD486762AEE26B90026B99E /* ExamView.swift in Sources */,
+				FA993C3E2B0FBFA800519D63 /* FileManager-DocumentsDirectory.swift in Sources */,
 				FAD486742AEE206E0026B99E /* SettingsView.swift in Sources */,
 				FAEDE21D2AE9D2FA00A51519 /* Word.swift in Sources */,
 				FAEDE20D2AE9D24700A51519 /* WordUpApp.swift in Sources */,

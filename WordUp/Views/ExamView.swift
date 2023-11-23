@@ -48,7 +48,7 @@ struct ExamView: View {
                 VStack {
                     Text("Points won today")
                         .font(.footnote)
-                    Text("\(dm.totalPoints)")
+                    Text("\(dm.todaysPoints)")
                         .font(.headline)
                 }
                 .foregroundStyle(.green)
@@ -235,7 +235,7 @@ struct ExamView: View {
             resultMessage = "wrong..."
             em.roundResult = .lost
         }
-        dm.wordCount += 1
+        dm.todaysWordCount += 1
 
     }
     
@@ -255,11 +255,12 @@ struct ExamView: View {
 @MainActor func recordScore(result: ExamModel.roundResults, word: Word, helpCount: Int, points: Int, dm: DataModel) {
     if result == .won {
         let score = points
-        dm.totalPoints += score
+        dm.todaysPoints += score
     } else {
         let score = (word.level * 3 + (helpCount * 3)) * -1
-        dm.totalPoints += score
+        dm.todaysPoints += score
     }
+//    dm.save()
     
 }
 

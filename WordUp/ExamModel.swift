@@ -71,10 +71,10 @@ import SwiftUI
         
         if roundResult == .won {
             if let index = words.firstIndex(of: currentExamWord) {
-                print("------")
-                print(words[0].name)
-                print("------")
-                
+//                print("------")
+//                print(words[0].name)
+//                print("------")
+//                
                 
                 words.remove(at: index)
                 words.append(currentExamWord)
@@ -83,10 +83,10 @@ import SwiftUI
             }
         } else {
             if let index = words.firstIndex(of: currentExamWord) {
-                print("~~~~~~~")
-                print(words[0].name)
-                print("~~~~~~~")
-                
+//                print("~~~~~~~")
+//                print(words[0].name)
+//                print("~~~~~~~")
+//                
                 words.remove(at: index)
                 let newIndex = Int(floor(Double(words.count / 2)))
                 words.insert(currentExamWord, at: newIndex)
@@ -104,9 +104,9 @@ import SwiftUI
         
         helpCount = 0
         
-        for (index, word) in words.enumerated() {
-            print("\(word.name)...\(index)")
-        }
+//        for (index, word) in words.enumerated() {
+//            print("\(word.name)...\(index)")
+//        }
         
     }
 

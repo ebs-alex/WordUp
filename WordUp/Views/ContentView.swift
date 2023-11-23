@@ -58,14 +58,14 @@ struct ContentView: View {
                         VStack {
                             Text("Words done today")
                                 .font(.footnote)
-                            Text("\(dm.wordCount)")
+                            Text("\(dm.todaysWordCount)")
                                 .font(.footnote)
                         }
                         Spacer()
                         VStack {
                             Text("Points Earned Today")
                                 .font(.footnote)
-                            Text("\(dm.totalPoints)")
+                            Text("\(dm.todaysPoints)")
                                 .font(.footnote)
                         }
                     }
@@ -78,6 +78,9 @@ struct ContentView: View {
         }
         .environmentObject(em)
         .environmentObject(dm)
+        .onAppear {
+//            print(dm.collectedData)
+        }
     }
 }
 

@@ -375,7 +375,7 @@
         "answer":"tireless",
         "partOfSpeech":"Adjective",
         "useSentence":"An indefatigable defender of human rights.",
-        "phonetics":"in-duh-fa-tuh-guh-bl",
+        "phonetics":"in-da-fa-tih-guh-bl",
         "level":3,
         "synonyms": [
             "Unwavering",
@@ -678,6 +678,27 @@
             "Fashionable",
             "Chic",
             "Elegant",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"myopic",
+        "name":"Myopic",
+        "fullDefinition":"Not able to see clearly things that are far away.",
+        "answer":"nearsighted",
+        "partOfSpeech":"Adjective",
+        "useSentence":"He has a rather myopic view of the world.",
+        "phonetics":"muy-aa-pik",
+        "level":3,
+        "synonyms": [
+            "shortsighted",
+            "foolish",
+            "imperceptive",
         ],
         "similarAnswers": [
             
