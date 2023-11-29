@@ -247,7 +247,7 @@
         "answer":"Brief",
         "partOfSpeech":"Adjective",
         "useSentence":"'No.' was his terse response",
-        "phonetics":"turss",
+        "phonetics":"turs",
         "level":3,
         "synonyms": [
             "Abrupt",
@@ -287,9 +287,9 @@
         "name":"Loquacious",
         "fullDefinition":"tending to talk a great deal; talkative.",
         "answer":"Verbose",
-        "partOfSpeech":"Noun",
-        "useSentence":"Steve, who knew his son's tendency toward unnecessary loquacity as well as I did, replied for him.",
-        "phonetics":"low-kwa-suh-tee",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Steve, who knew his son's loquacious tendencies as well as I did, replied for him.",
+        "phonetics":"low-kway-shus",
         "level":4,
         "synonyms": [
             "Talkative",
@@ -699,6 +699,91 @@
             "shortsighted",
             "foolish",
             "imperceptive",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"gesticulate",
+        "name":"Gesticulate",
+        "fullDefinition":"to use gestures, especially dramatic ones, to emphasize one's words.",
+        "answer":"motion",
+        "partOfSpeech":"Verb",
+        "useSentence":"She was shouting and gesticulating quite wildly.",
+        "phonetics":"jeh-sti-kyuh-layt",
+        "level":3,
+        "synonyms": [
+            "mime",
+            "signal",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"precocious",
+        "name":"Precocious",
+        "fullDefinition":"exceptionally smart, ahead of age in understanding.",
+        "answer":"Advanced",
+        "partOfSpeech":"Adjective",
+        "useSentence":"From an early age, he displayed a precocious talent for mathematics.",
+        "phonetics":"prih-ko-shis",
+        "level":4,
+        "synonyms": [
+            "Mature",
+            "Brilliant",
+            "Astute",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"troglodyte",
+        "name":"Troglodyte",
+        "fullDefinition":"A person who is regarded as being deliberately ignorant or old-fashioned or a recluse.",
+        "answer":"Caveman",
+        "partOfSpeech":"Noun",
+        "useSentence":"Seth is a troglodyte who spends most of his time brooding, shying from society",
+        "phonetics":"traa-gluh-dite",
+        "level":4,
+        "synonyms": [
+            "Brute",
+            "Barbarian",
+            "Savage",
+            "Primitive"
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"pedantic",
+        "name":"Pedantic",
+        "fullDefinition":"A person who is regarded as being deliberately ignorant or old-fashioned or a recluse.",
+        "answer":"Precise",
+        "partOfSpeech":"Adjective",
+        "useSentence":"He is very pedantic about grammar.",
+        "phonetics":"pih-dan-tik",
+        "level":3,
+        "synonyms": [
+            "Scrupulous",
+            "Exact",
+            "Finicky",
+            "Perfectionist",
         ],
         "similarAnswers": [
             

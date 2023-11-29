@@ -56,14 +56,14 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         VStack {
-                            Text("Words done today")
+                            Text("Words Presented")
                                 .font(.footnote)
                             Text("\(dm.todaysWordCount)")
                                 .font(.footnote)
                         }
                         Spacer()
                         VStack {
-                            Text("Points Earned Today")
+                            Text("Points Earned")
                                 .font(.footnote)
                             Text("\(dm.todaysPoints)")
                                 .font(.footnote)

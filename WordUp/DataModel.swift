@@ -1,8 +1,11 @@
 import SwiftUI
 
-@MainActor
+//@MainActor
 class DataModel: ObservableObject, Codable {
     private static let savePathList = FileManager.documentDirectory.appendingPathComponent("savedData")
+    
+    
+    
 
     @Published var todaysPoints: Int = 0 {
         didSet {
@@ -16,8 +19,11 @@ class DataModel: ObservableObject, Codable {
         }
     }
 
+    private var timer: Timer?
+
     init() {
         load()
+//        setupResetTimer()
     }
 
     private func save() {
@@ -38,6 +44,18 @@ class DataModel: ObservableObject, Codable {
         } catch {
             print("Error loading data: \(error)")
         }
+    }
+
+//    private func setupResetTimer() {
+//        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+//            // Reset properties to zero every minute
+//            self?.resetProperties()
+//        }
+//    }
+
+    private func resetProperties() {
+        todaysPoints = 0
+        todaysWordCount = 0
     }
 
     required init(from decoder: Decoder) throws {

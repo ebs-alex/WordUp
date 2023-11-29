@@ -46,7 +46,7 @@ struct ExamView: View {
                     .bold()
                 Spacer()
                 VStack {
-                    Text("Points won today")
+                    Text("Points won")
                         .font(.footnote)
                     Text("\(dm.todaysPoints)")
                         .font(.headline)
