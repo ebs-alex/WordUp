@@ -792,4 +792,26 @@
             
         ],
     },
+    {
+        "id":"capricious",
+        "name":"Capricious",
+        "fullDefinition":"Given to sudden and unaccountable changes of mood or behavior.",
+        "answer":"Fickle",
+        "partOfSpeech":"Adjective",
+        "useSentence":"It's terrible to feel that our livelihood hinges on a capricious boss.",
+        "phonetics":"kuh-prih-shis",
+        "level":3,
+        "synonyms": [
+            "Unstable",
+            "Mercurial",
+            "Volatile",
+            "Vacillating",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]

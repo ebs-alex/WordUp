@@ -46,9 +46,9 @@ struct ExamView: View {
                     .bold()
                 Spacer()
                 VStack {
-                    Text("Points won")
+                    Text("weighed %")
                         .font(.footnote)
-                    Text("\(dm.todaysPoints)")
+                    Text("\(dm.weightedSuccessRate, specifier: "%.1f")%")
                         .font(.headline)
                 }
                 .foregroundStyle(.green)
@@ -81,25 +81,29 @@ struct ExamView: View {
             }
             .padding(.bottom,5)
             
-            HStack {
-                if showingEarnable {
-                    Text("Earnable Points:   \(em.earnablePoints)")
-                        .padding()
-                        .font(.title3)
-                        .bold()
-                } else {
-                    Text(em.roundResult == .won ? "Points Won:   \(em.earnablePoints)" : "Points Won:   \((em.currentExamWord.level * 3 + (em.helpCount * 3)) * -1) " )
-                        .padding([.horizontal, .top])
-                        .font(.title3)
-                        .bold()
-                        .foregroundStyle(em.roundResult == .won ? .green : .red)
-                }
-                Spacer()
-            }
+//            HStack {
+//                if showingEarnable {
+//                    Text("Earnable Points:   \(Double(em.earnablePoints) / Double(dm.allTimePossiblePoints - (em.currentExamWord.level*3)) * 100, specifier: "%.1f")%")
+//                        .padding()
+//                        .font(.title3)
+//                        .bold()
+//                } else {
+//                    Text(em.roundResult == .won ? "Points Won:   \(em.earnablePoints)" : "Points Won:   \((em.currentExamWord.level * 3 + (em.helpCount * 3)) * -1) " )
+//                        .padding([.horizontal, .top])
+//                        .font(.title3)
+//                        .bold()
+//                        .foregroundStyle(em.roundResult == .won ? .green : .red)
+//                }
+//                Spacer()
+//            }
             
             Text(resultMessage)
                 .padding(.bottom,5)
-                .font(.title)
+                .font(.title2)
+//                .font(.custom(
+//                        "AmericanTypewriter",
+//                        fixedSize: 20))
+                .bold()
                 .foregroundStyle(em.roundResult == .won ? .green : .red)
             
             ScrollView {
@@ -235,7 +239,7 @@ struct ExamView: View {
             resultMessage = "wrong..."
             em.roundResult = .lost
         }
-        dm.todaysWordCount += 1
+        dm.totalWordCount += 1
 
     }
     
@@ -255,11 +259,12 @@ struct ExamView: View {
 @MainActor func recordScore(result: ExamModel.roundResults, word: Word, helpCount: Int, points: Int, dm: DataModel) {
     if result == .won {
         let score = points
-        dm.todaysPoints += score
+        dm.currentPoints += score
     } else {
         let score = (word.level * 3 + (helpCount * 3)) * -1
-        dm.todaysPoints += score
+        dm.currentPoints += score
     }
+    dm.allTimePossiblePoints += word.level*3
 //    dm.save()
     
 }

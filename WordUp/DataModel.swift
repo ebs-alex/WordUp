@@ -4,20 +4,33 @@ import SwiftUI
 class DataModel: ObservableObject, Codable {
     private static let savePathList = FileManager.documentDirectory.appendingPathComponent("savedData")
     
-    
-    
 
-    @Published var todaysPoints: Int = 0 {
+    @Published var currentPoints: Int = 0 {
         didSet {
             save()
         }
     }
+    
+    @Published var allTimePossiblePoints: Int = 0 {
+        didSet {
+            save()
+            computeSuccessRate()
+        }
+    }
 
-    @Published var todaysWordCount: Int = 0 {
+    @Published var totalWordCount: Int = 0 {
         didSet {
             save()
         }
     }
+    
+    @Published var weightedSuccessRate: Double = 0.0 {
+        didSet {
+            save()
+        }
+    }
+    
+    
 
     private var timer: Timer?
 
@@ -39,10 +52,24 @@ class DataModel: ObservableObject, Codable {
         do {
             let data = try Data(contentsOf: DataModel.savePathList)
             let decodedData = try JSONDecoder().decode(DataModel.self, from: data)
-            todaysPoints = decodedData.todaysPoints
-            todaysWordCount = decodedData.todaysWordCount
+            currentPoints = decodedData.currentPoints
+            totalWordCount = decodedData.totalWordCount
+            allTimePossiblePoints = decodedData.allTimePossiblePoints
+//            weightedSuccessRate = decodedData.weightedSuccessRate
         } catch {
             print("Error loading data: \(error)")
+        }
+    
+        computeSuccessRate()
+        
+        
+    }
+    
+    func computeSuccessRate() {
+        if allTimePossiblePoints != 0 {
+            self.weightedSuccessRate = Double(currentPoints) / Double(allTimePossiblePoints) * 100
+        } else {
+            self.weightedSuccessRate = 0.0
         }
     }
 
@@ -53,25 +80,33 @@ class DataModel: ObservableObject, Codable {
 //        }
 //    }
 
-    private func resetProperties() {
-        todaysPoints = 0
-        todaysWordCount = 0
+    func resetProperties() {
+        currentPoints = 0
+        totalWordCount = 0
+        allTimePossiblePoints = 0
+        weightedSuccessRate = 0.0
     }
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        todaysPoints = try container.decode(Int.self, forKey: .todaysPoints)
-        todaysWordCount = try container.decode(Int.self, forKey: .todaysWordCount)
+        currentPoints = try container.decode(Int.self, forKey: .todaysPoints)
+        totalWordCount = try container.decode(Int.self, forKey: .todaysWordCount)
+        allTimePossiblePoints = try container.decode(Int.self, forKey: .totalPossiblePoints)
+//        weightedSuccessRate = try container.decode(Double.self, forKey: .weightedSuccessRate)
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(todaysPoints, forKey: .todaysPoints)
-        try container.encode(todaysWordCount, forKey: .todaysWordCount)
+        try container.encode(currentPoints, forKey: .todaysPoints)
+        try container.encode(totalWordCount, forKey: .todaysWordCount)
+        try container.encode(allTimePossiblePoints, forKey: .totalPossiblePoints)
+//        try container.encode(weightedSuccessRate, forKey: .weightedSuccessRate)
     }
 
     private enum CodingKeys: String, CodingKey {
         case todaysPoints
         case todaysWordCount
+        case totalPossiblePoints
+        case weightedSuccessRate
     }
 }

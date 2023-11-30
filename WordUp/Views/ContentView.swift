@@ -58,14 +58,14 @@ struct ContentView: View {
                         VStack {
                             Text("Words Presented")
                                 .font(.footnote)
-                            Text("\(dm.todaysWordCount)")
+                            Text("\(dm.totalWordCount)")
                                 .font(.footnote)
                         }
                         Spacer()
                         VStack {
-                            Text("Points Earned")
+                            Text("Weighted Success %")
                                 .font(.footnote)
-                            Text("\(dm.todaysPoints)")
+                            Text("\(dm.weightedSuccessRate, specifier: "%.1f")%")
                                 .font(.footnote)
                         }
                     }

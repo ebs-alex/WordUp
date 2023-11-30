@@ -42,8 +42,7 @@ struct DataView: View {
         }
     }
     func resetData() {
-        dm.todaysPoints = 0
-        dm.todaysWordCount = 0
+        dm.resetProperties()
     }
 }
 
