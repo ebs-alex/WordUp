@@ -50,6 +50,7 @@ struct ExamView: View {
                         .font(.footnote)
                     Text("\(dm.weightedSuccessRate, specifier: "%.1f")%")
                         .font(.headline)
+                        .foregroundStyle(dm.weightedSuccessRate < 0.0 ? .red : .green )
                 }
                 .foregroundStyle(.green)
             }

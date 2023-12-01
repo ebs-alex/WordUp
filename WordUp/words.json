@@ -500,7 +500,7 @@
         "answer":"Irritable",
         "partOfSpeech":"Adjective",
         "useSentence":"That house belongs to an irascible crank who never has a kind word for any neighbor.",
-        "phonetics":"ih-ra-suh-bul",
+        "phonetics":"ih-ra-sih-bul",
         "level":3,
         "synonyms": [
             "Crabby",
@@ -806,6 +806,50 @@
             "Mercurial",
             "Volatile",
             "Vacillating",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"acrimony",
+        "name":"Acrimony",
+        "fullDefinition":"Sharpness, harshness, or bitterness of nature, speech, disposition.",
+        "answer":"Hostility",
+        "partOfSpeech":"Noun",
+        "useSentence":"The situation turned into a quagmire of lawsuits, acrimony, & finger-pointing.",
+        "phonetics":"ah-krih-mow-nee",
+        "level":3,
+        "synonyms": [
+            "Enmity",
+            "Bitterness",
+            "Malice",
+            "Antagonism",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"kinetic",
+        "name":"Kinetic",
+        "fullDefinition":"Of or relating to the motion of material bodies and the forces and energy associated therewith.",
+        "answer":"Motion",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Blades attached to wind turbines collect the kinetic energy of wind.",
+        "phonetics":"kih-neh-tik",
+        "level":3,
+        "synonyms": [
+            "Movement",
+            "Motile",
+            "Unfixed",
+            "Active",
         ],
         "similarAnswers": [
             
