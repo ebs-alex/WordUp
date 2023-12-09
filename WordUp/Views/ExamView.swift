@@ -31,8 +31,6 @@ struct ExamView: View {
     @State private var selectionsEnabled = true
     
     @State private var showingEarnable = true
- 
-    
     
     var body: some View {
         VStack {
@@ -219,6 +217,9 @@ struct ExamView: View {
         }
         .preferredColorScheme(.dark)
         .padding()
+        .onDisappear {
+            em.dismissedNext()
+        }
 
     }
     

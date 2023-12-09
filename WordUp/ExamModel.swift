@@ -43,18 +43,18 @@ import SwiftUI
         repeat {
             let randomIndex = Int.random(in: 0...words.count-1)
             wrong1 = words[randomIndex].answer
-        } while wrong1 == answer
+        } while wrong1 == answer && currentExamWord.similarAnswers.contains(wrong1)
         options.append(wrong1)
         repeat {
             let randomIndex = Int.random(in: 0...words.count-1)
             wrong2 = words[randomIndex].answer
-        } while options.contains(wrong2)
+        } while options.contains(wrong2) && currentExamWord.similarAnswers.contains(wrong2)
         options.append(wrong2)
         
         repeat {
             let randomIndex = Int.random(in: 0...words.count-1)
             wrong3 = words[randomIndex].answer
-        } while options.contains(wrong3)
+        } while options.contains(wrong3) && currentExamWord.similarAnswers.contains(wrong3)
         options.append(wrong3)
         return options.shuffled()
     }
@@ -67,19 +67,13 @@ import SwiftUI
     
 
     func nextWord() {
-
-        
         if roundResult == .won {
             if let index = words.firstIndex(of: currentExamWord) {
 //                print("------")
 //                print(words[0].name)
 //                print("------")
-//                
-                
                 words.remove(at: index)
                 words.append(currentExamWord)
-                
-                
             }
         } else {
             if let index = words.firstIndex(of: currentExamWord) {
@@ -93,21 +87,24 @@ import SwiftUI
                 
             }
         }
-        
         currentExamWord = words[wordIndex]
-        
         options = generateOptions()
-        
         earnablePoints = calcEarnablePoints()
-        
         roundResult = .neutral
-        
         helpCount = 0
         
-//        for (index, word) in words.enumerated() {
-//            print("\(word.name)...\(index)")
-//        }
-        
+    }
+    
+    func dismissedNext() {
+        if let index = words.firstIndex(of: currentExamWord) {
+            words.remove(at: index)
+            words.append(currentExamWord)
+        }
+        currentExamWord = words[wordIndex]
+        options = generateOptions()
+        earnablePoints = calcEarnablePoints()
+        roundResult = .neutral
+        helpCount = 0
     }
 
     

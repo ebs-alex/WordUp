@@ -15,8 +15,7 @@
             "diminish"
         ],
         "similarAnswers": [
-            "testing123",
-            "123testing"
+            
         ],
         "metaTags": [
             
@@ -255,7 +254,7 @@
             "Concise",
         ],
         "similarAnswers": [
-            
+            "Concise",
         ],
         "metaTags": [
             
@@ -853,6 +852,28 @@
         ],
         "similarAnswers": [
             
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"pithy",
+        "name":"Pithy",
+        "fullDefinition":"expressing an idea cleverly in a few words.",
+        "answer":"Concise",
+        "partOfSpeech":"Adjective",
+        "useSentence":"We need a pithy, short title, which will be taken up easily in the media.",
+        "phonetics":"pih-thee",
+        "level":3,
+        "synonyms": [
+            "Compact",
+            "Succinct",
+            "Crisp",
+            "Terse",
+        ],
+        "similarAnswers": [
+            "Brief",
         ],
         "metaTags": [
             
