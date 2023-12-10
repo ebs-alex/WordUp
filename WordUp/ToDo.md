@@ -1,17 +1,5 @@
 
 To Do:
-- Add more words
-- exam view options need more consistent sizing
 
-- transfer properties and methods to viewModel
-
-- Add word-array for ExamView
-
-- Add Favorites function to Dictionary
-- Add favorites function to random word and exam view
-
-
-- on ExamView, when we hit the "back" button we need to trigger "next word" is an option selection has already been made
-
-
-? How will we keep similar answers from appearing for a word that can take both defintions?
+- Add Favorites function & filter to Dictionary
+- Add favorites function to exam view

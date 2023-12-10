@@ -255,6 +255,7 @@
         ],
         "similarAnswers": [
             "Concise",
+            "Curt",
         ],
         "metaTags": [
             
@@ -874,9 +875,79 @@
         ],
         "similarAnswers": [
             "Brief",
+            "Logical",
+            "Curt"
         ],
         "metaTags": [
             
         ],
     },
+    {
+        "id":"cogent",
+        "name":"Cogent",
+        "fullDefinition":"Clear, logical, and convincing.",
+        "answer":"Logical",
+        "partOfSpeech":"Adjective",
+        "useSentence":"They put forward cogent arguments for their case.",
+        "phonetics":"kohw-jint",
+        "level":4,
+        "synonyms": [
+            "Clear",
+            "Compelling",
+            "Pithy",
+            "Convincing",
+        ],
+        "similarAnswers": [
+            "Brief",
+            "Concise",
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"pusillanimous",
+        "name":"Pusillanimous",
+        "fullDefinition":"Showing a lack of courage or determination.",
+        "answer":"Spineless",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Sadly, the past two decades have seen a pusillanimous flight into cowering capitulation.",
+        "phonetics":"pyoo-sih-la-nih-muhs",
+        "level":4,
+        "synonyms": [
+            "Timid",
+            "Cowardly",
+            "Fearful",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"laconic",
+        "name":"Laconic",
+        "fullDefinition":"using very few words.",
+        "answer":"Curt",
+        "partOfSpeech":"Adjective",
+        "useSentence":"his laconic reply suggested a lack of interest in the topic.",
+        "phonetics":"luh-kah-nik",
+        "level":4,
+        "synonyms": [
+            "Terse",
+            "Brief",
+            "Concise",
+        ],
+        "similarAnswers": [
+            "Brief",
+            "Concise",
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    
 ]
