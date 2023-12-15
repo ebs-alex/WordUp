@@ -628,7 +628,7 @@
         "name":"Quorum",
         "fullDefinition":"The minimum number of people who must be present for a meeting to begin.",
         "answer":"Minimum Attendance",
-        "partOfSpeech":"Nount",
+        "partOfSpeech":"Noun",
         "useSentence":"We must have a quorum to make that decision.",
         "phonetics":"kwo-ruhm",
         "level":4,
@@ -930,11 +930,11 @@
     {
         "id":"laconic",
         "name":"Laconic",
-        "fullDefinition":"using very few words.",
+        "fullDefinition":"Using very few words.",
         "answer":"Curt",
         "partOfSpeech":"Adjective",
-        "useSentence":"his laconic reply suggested a lack of interest in the topic.",
-        "phonetics":"luh-kah-nik",
+        "useSentence":"His laconic reply suggested a lack of interest in the topic.",
+        "phonetics":"lah-kah-nik",
         "level":4,
         "synonyms": [
             "Terse",

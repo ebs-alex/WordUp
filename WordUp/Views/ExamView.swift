@@ -109,7 +109,7 @@ struct ExamView: View {
                 VStack {
                     HStack {
                         Text("\" \(em.currentExamWord.phonetics) \"")
-                            .font(.title3)
+                            .font(.footnote)
                             .padding(.horizontal)
                         Spacer()
                         Text(em.currentExamWord.partOfSpeech)
