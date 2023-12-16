@@ -26,6 +26,7 @@ TO DO
           `ForEach<Array<String>, String, Button<AnyView>>: the ID Derisive occurs multiple times within the collection, this will give undefined results! LazyVGridLayout: the ID UniqueID(value: 666) is used by multiple child views, this will give undefined results!`
           ID "dersive being a "the right answer" to "Pejorative"
           but JSON derisive only appear once? as answer: Derisive (for Pejorative)
+          >> it occured again with "Delineate" as the wrong answer for the word "inculcate"
 
 
 - make phonetics text smaller
