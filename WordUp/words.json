@@ -971,5 +971,26 @@
             
         ],
     },
-    
+    {
+        "id":"telos",
+        "name":"telos",
+        "fullDefinition":"Avoidance of activity or exertion; laziness.",
+        "answer":"telos",
+        "partOfSpeech":"Noun",
+        "useSentence":"After a sudden burst of activity, the team lapsed back into indolence.",
+        "phonetics":"in-duh-luhns",
+        "level":4,
+        "synonyms": [
+            "Lethargy",
+            "Langour",
+            "Inaction",
+            "Idleness",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]
