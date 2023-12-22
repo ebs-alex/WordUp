@@ -972,19 +972,41 @@
         ],
     },
     {
-        "id":"telos",
-        "name":"telos",
-        "fullDefinition":"Avoidance of activity or exertion; laziness.",
-        "answer":"telos",
-        "partOfSpeech":"Noun",
-        "useSentence":"After a sudden burst of activity, the team lapsed back into indolence.",
-        "phonetics":"in-duh-luhns",
+        "id":"recalcitrant",
+        "name":"Recalcitrant",
+        "fullDefinition":"Having an obstinately uncooperative attitude toward authority or discipline.",
+        "answer":"Insubordinate",
+        "partOfSpeech":"Adjective",
+        "useSentence":"A rowdy mob of recalcitrant fifteen-year-olds.",
+        "phonetics":"rih-kal-sih-trent",
+        "level":3,
+        "synonyms": [
+            "Defiant",
+            "Wayward",
+            "Rebellious",
+            "Unmanageable",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"mellifluous",
+        "name":"Mellifluous",
+        "fullDefinition":"sweetly or smoothly flowing; pleasant to hear.",
+        "answer":"sweet-sounding",
+        "partOfSpeech":"Adjective",
+        "useSentence":"It must be the most musical and mellifluous language in the world.",
+        "phonetics":"muh-lih-floo-es",
         "level":4,
         "synonyms": [
-            "Lethargy",
-            "Langour",
-            "Inaction",
-            "Idleness",
+            "Soothing",
+            "Harmonious",
+            "Dulcet",
+            "Euphonious",
         ],
         "similarAnswers": [
             
