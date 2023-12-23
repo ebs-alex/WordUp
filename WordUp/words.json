@@ -1015,4 +1015,26 @@
             
         ],
     },
+    {
+        "id":"modular",
+        "name":"Modular",
+        "fullDefinition":"Constructed with standardized units or dimensions for flexibility and variety in use.",
+        "answer":"Adjustable",
+        "partOfSpeech":"Adjective",
+        "useSentence":"He found modular furniture very useful since he moved a lot.",
+        "phonetics":"maw-dju-luhr",
+        "level":3,
+        "synonyms": [
+            "Flexible",
+            "Interchangeable",
+            "Extensible",
+            "Adaptable",
+        ],
+        "similarAnswers": [
+            
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]
