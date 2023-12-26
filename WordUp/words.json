@@ -1037,4 +1037,26 @@
             
         ],
     },
+    {
+        "id":"sardonic",
+        "name":"Sardonic",
+        "fullDefinition":"Grimly mocking or cynical.",
+        "answer":"Satiric",
+        "partOfSpeech":"Adjective",
+        "useSentence":"His older sister gave him a sardonic smile as Sam got scolded by his father.",
+        "phonetics":"saar-daa-nik",
+        "level":4,
+        "synonyms": [
+            "Mocking",
+            "Taunting",
+            "Cynical",
+            "Sneering",
+        ],
+        "similarAnswers": [
+            "Derisive"
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]
