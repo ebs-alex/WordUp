@@ -1059,4 +1059,24 @@
             
         ],
     },
+    {
+        "id":"portmanteau",
+        "name":"Portmanteau",
+        "fullDefinition":"A word blending the sounds & combining the meanings of two other words, i.e 'brunch'",
+        "answer":"blendword",
+        "partOfSpeech":"Noun",
+        "useSentence":"'athleisure' is a portmanteau of the words 'athletic' & 'leisure'.",
+        "phonetics":"port-man-tow",
+        "level":4,
+        "synonyms": [
+            "compound-word",
+            "merged-word",
+        ],
+        "similarAnswers": [
+            "Derisive"
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]
