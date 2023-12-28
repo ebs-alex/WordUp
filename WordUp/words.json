@@ -1073,7 +1073,25 @@
             "merged-word",
         ],
         "similarAnswers": [
-            "Derisive"
+        ],
+        "metaTags": [
+            
+        ],
+    },
+    {
+        "id":"ontological",
+        "name":"Ontological",
+        "fullDefinition":"Dealing or related to the study of existence, being, or reality.",
+        "answer":"Existential",
+        "partOfSpeech":"Adjective",
+        "useSentence":"Materialism is for him, ontological; involving the assumption that we know the essence of matter.",
+        "phonetics":"on-taw-law-jih-kol",
+        "level":4,
+        "synonyms": [
+            "Essential",
+            "Fundamental",
+        ],
+        "similarAnswers": [
         ],
         "metaTags": [
             
