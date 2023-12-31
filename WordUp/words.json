@@ -1097,4 +1097,25 @@
             
         ],
     },
+    {
+        "id":"stochastic",
+        "name":"Stochastic",
+        "fullDefinition":"A thing or process that has a random variable or factors.",
+        "answer":"Random",
+        "partOfSpeech":"Adjective",
+        "useSentence":"A stochastic chart is where one point on a graph does not influence the next point.",
+        "phonetics":"stuh-ka-stik",
+        "level":5,
+        "synonyms": [
+            "Uncertain",
+            "Indeterminate",
+            "Chaotic",
+            "Inconsistent",
+        ],
+        "similarAnswers": [
+        ],
+        "metaTags": [
+            
+        ],
+    },
 ]
